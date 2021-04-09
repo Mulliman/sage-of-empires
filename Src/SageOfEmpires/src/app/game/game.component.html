@@ -1,0 +1,12 @@
+<mat-grid-list cols="2">
+    <mat-grid-tile>
+        
+        <app-add-player *ngIf="!gameService.player"></app-add-player>
+
+        <app-player></app-player>
+
+    </mat-grid-tile>
+    <mat-grid-tile>
+        
+    </mat-grid-tile>
+  </mat-grid-list>

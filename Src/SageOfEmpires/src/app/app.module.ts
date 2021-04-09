@@ -3,14 +3,37 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { OpponentComponent } from './opponent/opponent.component';
+import { PlayerComponent } from './player/player.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GameComponent } from './game/game.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
+import { MatGridListModule } from '@angular/material/grid-list';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+
+import { CommonModule } from '@angular/common';
+import { AddPlayerComponent } from './add-player/add-player.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OpponentComponent,
+    PlayerComponent,
+    GameComponent,
+    AddPlayerComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+
+    // Material
+    MatGridListModule,
+    MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
