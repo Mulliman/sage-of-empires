@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Civ } from '../model';
+import { Civ, PlayerColour } from '../model';
+import { GameService } from '../services/game.service';
 
 @Component({
   selector: 'app-opponent',
@@ -8,11 +9,12 @@ import { Civ } from '../model';
 })
 export class OpponentComponent implements OnInit {
 
-  public civ: Civ;
-
-  constructor() { }
+  constructor(public gameService: GameService) { }
 
   ngOnInit(): void {
   }
 
+  changeColour(colour: PlayerColour){
+    this.gameService.opponent.playerColour = colour;
+  }
 }

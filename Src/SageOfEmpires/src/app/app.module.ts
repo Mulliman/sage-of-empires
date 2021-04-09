@@ -11,9 +11,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 import { CommonModule } from '@angular/common';
 import { AddPlayerComponent } from './add-player/add-player.component';
+import { ColourChooserComponent } from './colour-chooser/colour-chooser.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { AddPlayerComponent } from './add-player/add-player.component';
     OpponentComponent,
     PlayerComponent,
     GameComponent,
-    AddPlayerComponent
+    AddPlayerComponent,
+    ColourChooserComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +36,8 @@ import { AddPlayerComponent } from './add-player/add-player.component';
 
     // Material
     MatGridListModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

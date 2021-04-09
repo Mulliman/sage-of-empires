@@ -3,7 +3,7 @@ import { CivService } from '../services/civ.service';
 import { FormControl } from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
-import { Civ, Player } from '../model';
+import { Civ, Player, Opponent } from '../model';
 import { GameService } from '../services/game.service';
 
 @Component({
@@ -27,6 +27,12 @@ export class AddPlayerComponent implements OnInit {
       );
   }
 
+  getCivPlaceholder(){
+    return !this.isOpponent
+    ? "Your civ..."
+    : "Opponent civ..."
+  }
+
   selectCiv(civName){
     if(!this.isOpponent)
     {
@@ -34,6 +40,11 @@ export class AddPlayerComponent implements OnInit {
       var player = new Player(civ);
 
       this.gameService.setPlayer(player);
+    }else{
+      var civ = this.civService.getCiv(civName);
+      var player = new Opponent(civ);
+
+      this.gameService.setOpponent(player);
     }
   }
 }

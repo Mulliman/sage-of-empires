@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../services/game.service';
+import { PlayerColour } from '../model';
 
 @Component({
   selector: 'app-player',
@@ -13,4 +14,7 @@ export class PlayerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeColour(colour: PlayerColour){
+    this.gameService.player.playerColour = colour;
+  }
 }

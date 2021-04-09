@@ -7,6 +7,10 @@
 
     </mat-grid-tile>
     <mat-grid-tile>
+
+        <app-add-player *ngIf="!gameService.opponent" [isOpponent]="true"></app-add-player>
+
+        <app-opponent></app-opponent>
         
     </mat-grid-tile>
   </mat-grid-list>

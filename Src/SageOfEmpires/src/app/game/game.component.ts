@@ -17,21 +17,4 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-
-  addPlayer(){
-    console.log("addPlayer");
-    
-    let player = {
-      number: 1,
-      civ: { name: "Britons"},
-      team: 1
-    }
-
-    this.gameService.setPlayer(player);
-  }
-
-  addOpponent(){
-    
-  }
 }

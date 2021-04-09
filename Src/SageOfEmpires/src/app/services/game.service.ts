@@ -14,4 +14,10 @@ export class GameService {
   setPlayer(player: Player){
     this.player = player;
   }
+
+  setOpponent(opponent: Opponent){
+    this.opponent = opponent;
+  }
+
+  
 }

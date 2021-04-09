@@ -1,3 +1,5 @@
-<div *ngIf="gameService.player">
+<div *ngIf="gameService.player" class="player background-{{gameService.player.getColour().toLowerCase()}}">
     <h2>{{gameService.player.civ.name}}</h2>
+
+    <app-colour-chooser (onColourSelected)="changeColour($event)" ></app-colour-chooser>
 </div>
