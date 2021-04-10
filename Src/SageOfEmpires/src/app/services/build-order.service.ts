@@ -8,8 +8,10 @@ import { Britons, Aztecs } from '../civs';
 export class BuildOrderService {
 
   @Output() onBuildOrderSelected = new EventEmitter<IBuildOrder>();
+  @Output() onStepSetAsDone = new EventEmitter<number>();
 
   selectedBuildOrder: IBuildOrder;
+  lastTimeSetAsDone: number;
 
   public buildOrders: IBuildOrder[] = [
     new DrushFastCastleBuildOrder(),
@@ -26,6 +28,11 @@ export class BuildOrderService {
     this.selectedBuildOrder = buildOrder;
 
     this.onBuildOrderSelected.emit(this.selectedBuildOrder);
+  }
+
+  setLastTimeSetAsDone(value: number){
+    this.lastTimeSetAsDone = value;
+    this.onStepSetAsDone.emit(this.lastTimeSetAsDone);
   }
 }
 

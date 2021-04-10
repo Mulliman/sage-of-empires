@@ -1,6 +1,7 @@
 import { Directive, ElementRef, Renderer2, Input, OnInit } from '@angular/core';
 import { GameSpeed } from '../model';
 import { GameService } from '../services/game.service';
+import { BuildOrderService } from '../services/build-order.service';
 
 @Directive({
   selector: '[appBuildOrderTarget]'
@@ -12,7 +13,8 @@ export class BuildOrderTargetDirective {
 
   constructor(private renderer: Renderer2,
     private elementRef: ElementRef,
-    private gameService: GameService) { }
+    private gameService: GameService,
+    private buildOrderService: BuildOrderService) { }
 
   ngOnInit() {
     if(this.idealTime <= 0){
@@ -40,8 +42,9 @@ export class BuildOrderTargetDirective {
       } else if(elapsedSeconds >= bronze && elapsedSeconds < bad){
         awardClass = "bronze";
       } else if(elapsedSeconds >= bad){
-        awardClass = "bad";
+        awardClass = "done";
         clearInterval(interval);
+        this.buildOrderService.setLastTimeSetAsDone(idealTime);
       }
 
       if(awardClass){
@@ -50,6 +53,6 @@ export class BuildOrderTargetDirective {
         this.renderer.removeClass(this.elementRef.nativeElement,"bronze");
         this.renderer.addClass(this.elementRef.nativeElement, awardClass);
       }
-    }, 5000);
+    }, 2000);
   }
 }

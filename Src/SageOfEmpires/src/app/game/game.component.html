@@ -7,7 +7,9 @@
         </div>
         <div class="build-order">
             <app-timer></app-timer>
-            <app-build-order-panel></app-build-order-panel>
+            <div class="scroll-panel" #divToScroll>
+                <app-build-order-panel></app-build-order-panel>
+            </div>
         </div>
         <div class="player">
             <app-add-player *ngIf="!gameService.opponent" [isOpponent]="true"></app-add-player>
