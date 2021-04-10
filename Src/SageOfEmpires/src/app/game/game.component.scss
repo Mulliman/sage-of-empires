@@ -8,16 +8,16 @@
       }
       
       .build-order {
-        width: 25%; /* A fixed width as the default */
+        width: 30%; /* A fixed width as the default */
         height: 100%;
         max-height: 100%;
         background: brown;
       }
       
       .player { 
-        flex-grow: 1; /* Set the middle element to grow and stretch */
+        width: 35%;
         height: 100%;
         max-height: 100%;
-        background: burlywood;
+        background: #222;
       }
 }

@@ -3,6 +3,37 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+
+.fifty-fifty{
+    display: flex;
+
+    > div{
+        width: 50%;
+    }
+}
+
+/* Material additions */
+
+.mat-card-avatar.large-avatar{
+    width: 60px;
+    height: 60px;
+}
+
+
+
+
+
+/* Colours */
+
+
+.good{
+    color: rgb(31, 114, 31);
+}
+
+.bad{
+    color: #eb0000;
+}
+
 .background-blue{
     background: #3e59f8;
     color: white;
@@ -39,7 +70,79 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .background-orange{
-    background: #f99200;
+    background: #f99100;
     color: black;
 }
 
+
+.background-blue-ish{
+    background: #3e59f850;
+    background: linear-gradient(#3e59f880, #3e59f800);
+    color: white;
+}
+
+.background-red-ish{
+    background: #eb000050;
+    background: linear-gradient(#eb000080, #eb000000);
+    color: white;
+}
+
+.background-green-ish{
+    background: #00fe0080;
+    background: linear-gradient(#00fe0050, #00fe0000);
+    color: black;
+}
+
+.background-yellow-ish{
+    background: #ffff0150;
+    background: linear-gradient(#ffff0180, #ffff0100);
+    color: black;
+}
+
+.background-cyan-ish{
+    background: #00ffff50;
+    background: linear-gradient(#00ffff80, #00ffff00);
+    color: black;
+}
+
+.background-pink-ish{
+    background: #ff57b350;
+    background: linear-gradient(#ff57b380, #ff57b300);
+    color: white;
+}
+
+.background-grey-ish{
+    background: #79797950;
+    background: linear-gradient(#797979FF, #79797900);
+    color: white;
+}
+
+.background-orange-ish{
+    background: #f9910050;
+    background: linear-gradient(#f9910080, #f9910000);
+    color: black;
+}
+
+.padding{
+    padding: 20px;
+}
+
+.padding-top{
+    padding-top: 20px;
+}
+
+.padding-bottom{
+    padding-bottom: 20px;
+}
+
+.margin{
+    margin: 20px;
+}
+
+.margin-top{
+    margin-top: 20px;
+}
+
+.margin-bottom{
+    margin-bottom: 20px;
+}

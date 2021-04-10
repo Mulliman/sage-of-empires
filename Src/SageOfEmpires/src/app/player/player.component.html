@@ -1,5 +1,3 @@
-<div *ngIf="gameService.player" class="player background-{{gameService.player.getColour().toLowerCase()}}">
-    <app-civ-details [civ]="gameService.player.civ"></app-civ-details>
-
-    <app-colour-chooser (onColourSelected)="changeColour($event)" ></app-colour-chooser>
+<div *ngIf="gameService.player" class="player padding background-{{gameService.player.getColour().toLowerCase()}}-ish">
+    <app-civ-details [civ]="gameService.player.civ" [isPlayer]="true"></app-civ-details>
 </div>

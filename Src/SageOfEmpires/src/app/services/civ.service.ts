@@ -21,6 +21,10 @@ export class CivService {
       return this.civs.find(c => c.name.toLowerCase() == name);
   }
 
+  public getCivIconPath(civ: ICiv): string{
+    return "/assets/images/civs/CivIcon-" + civ.name + ".webp";
+}
+
   public filterCivsByName(input:string): ICiv[]{
       const filterValue = input.toLowerCase();
   

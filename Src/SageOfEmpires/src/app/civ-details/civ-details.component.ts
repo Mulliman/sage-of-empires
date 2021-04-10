@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { GameService } from '../services/game.service';
-import { ICiv } from '../model';
+import { ICiv, PlayerColour } from '../model';
 
 @Component({
   selector: 'app-civ-details',
@@ -10,12 +10,24 @@ import { ICiv } from '../model';
 export class CivDetailsComponent implements OnInit {
 
   @Input() civ: ICiv;
+  @Input() isPlayer: boolean;
+
+  hasCompletedSettingsOnce: boolean = false;
 
   constructor(public gameService: GameService) { }
 
   ngOnInit(): void {
     console.log(this.civ.civBonuses);
-    
+  }
+
+  changeColour(colour: PlayerColour){
+    if(this.isPlayer){
+      this.gameService.player.playerColour = colour;
+    } else{
+      this.gameService.opponent.playerColour = colour;
+    }
+
+    this.hasCompletedSettingsOnce = true;
   }
 
 }

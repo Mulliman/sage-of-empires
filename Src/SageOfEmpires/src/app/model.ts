@@ -13,13 +13,38 @@ export interface ICiv
 
     readonly teamBonus: string;
     readonly civBonuses: string[];
+
+    getIconPath();
 }
+
+export abstract class CivBase implements ICiv
+{
+   abstract name: string;    
+   abstract armyType: string;
+   abstract uniqueUnits: IUnit[];
+   abstract castleTech: ITech;
+   abstract imperialTech: ITech;
+   abstract teamBonus: string;
+   abstract civBonuses: string[];
+
+   getIconPath () { return "/assets/images/civs/CivIcon-" + this.name + ".webp" };
+} 
 
 export interface IUnit
 {
     name: string;
     strengths: string;
     weaknesses: string;
+
+    getIconPath();
+}
+
+export abstract class UnitBase implements IUnit{
+    abstract name: string;
+    abstract strengths: string;
+    abstract weaknesses: string;
+
+    getIconPath () { return "/assets/images/units/" + this.name.replace(" ","") + "Icon-DE.webp" };
 }
 
 export interface ITech

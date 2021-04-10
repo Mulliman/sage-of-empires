@@ -1,7 +1,7 @@
-import { ICiv, IUnit, ITech } from './model';
+import { ICiv, IUnit, ITech, CivBase } from './model';
 import { Longbowman, JaguarWarrior } from './units';
 
-export class Aztecs implements ICiv {
+export class Aztecs extends CivBase {
     armyType = "Infantry and Monk";
     uniqueUnits = [ new JaguarWarrior() ];
     castleTech = { name: "Atlatl", details: "Gives Skirmishers +1 attack and range." };
@@ -14,9 +14,10 @@ export class Aztecs implements ICiv {
         "Start with +50 gold."
     ];
     name: any = "Aztecs";
+
 }
 
-export class Britons implements ICiv {
+export class Britons extends CivBase {
     armyType = "Archer";
     uniqueUnits = [ new Longbowman() ];
     castleTech = { name: "Yeomen", details: "Gives foot archers +1 range and towers +2 attack." };
