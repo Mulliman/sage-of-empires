@@ -1,0 +1,12 @@
+<div>
+    <div>
+        <time>{{gameService.elapsedSeconds | gameTime : gameService.gameSpeed}}</time>
+    </div>
+    
+    <mat-button-toggle-group name="changeSpeed" aria-label="Change speed" class="speed-chooser" [(ngModel)]="selectedSpeed">
+        <mat-button-toggle (click)="changeSpeed(option)" *ngFor="let option of speedOptions" [value]="option">{{option.name}}</mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <button *ngIf="!gameService.isPlaying" (click)="gameService.start()" class="start-button">Start the game already!</button>
+    <button *ngIf="gameService.isPlaying" (click)="gameService.pause()" class="pause-button">Pause</button>
+</div>

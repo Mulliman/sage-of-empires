@@ -21,6 +21,8 @@ import { ChooseBuildOrderComponent } from './choose-build-order/choose-build-ord
 import { IsRecommendedPipe } from './pipes/is-recommended.pipe';
 import { BuildOrderPanelComponent } from './build-order-panel/build-order-panel.component';
 import { CivDetailsComponent } from './civ-details/civ-details.component';
+import { GameTimePipe } from './pipes/game-time.pipe';
+import { TimerComponent } from './timer/timer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { CivDetailsComponent } from './civ-details/civ-details.component';
     ChooseBuildOrderComponent,
     IsRecommendedPipe,
     BuildOrderPanelComponent,
-    CivDetailsComponent
+    CivDetailsComponent,
+    GameTimePipe,
+    TimerComponent
   ],
   imports: [
     CommonModule,

@@ -97,3 +97,24 @@ export class BuildOrderStep
     footnote?: string;
     imageUrl?: string;
 }
+
+export class GameSpeed {
+    constructor(public name: string, public speed: number) {};
+}
+
+export enum GameSpeeds {
+    None = 0,
+    Slow = 1,
+    Casual = 1.5,
+    Normal = 1.7,
+    Fast = 2
+}
+
+export class GameSpeedOptions{
+    public static array: GameSpeed[] = [
+        new GameSpeed("Slow", GameSpeeds.Slow),
+        new GameSpeed("Casual", GameSpeeds.Casual),
+        new GameSpeed("Normal", GameSpeeds.Normal),
+        new GameSpeed("Fast", GameSpeeds.Fast),
+    ];
+}
