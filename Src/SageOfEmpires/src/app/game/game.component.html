@@ -1,16 +1,30 @@
-<mat-grid-list cols="2">
+<!-- <mat-grid-list cols="2">
     <mat-grid-tile>
         
-        <app-add-player *ngIf="!gameService.player"></app-add-player>
-
-        <app-player></app-player>
+        
 
     </mat-grid-tile>
     <mat-grid-tile>
 
-        <app-add-player *ngIf="!gameService.opponent" [isOpponent]="true"></app-add-player>
-
-        <app-opponent></app-opponent>
+        
         
     </mat-grid-tile>
-  </mat-grid-list>
+  </mat-grid-list> -->
+
+  <div class="game">
+    <div class="container">
+        <div class="player">
+            <app-add-player *ngIf="!gameService.player"></app-add-player>
+
+            <app-player></app-player>
+        </div>
+        <div class="build-order">
+            <app-choose-build-order></app-choose-build-order>
+        </div>
+        <div class="player">
+            <app-add-player *ngIf="!gameService.opponent" [isOpponent]="true"></app-add-player>
+
+            <app-opponent></app-opponent>
+        </div>
+    </div>
+  </div>

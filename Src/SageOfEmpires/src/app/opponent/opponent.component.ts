@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Civ, PlayerColour } from '../model';
+import { ICiv, PlayerColour } from '../model';
 import { GameService } from '../services/game.service';
 
 @Component({

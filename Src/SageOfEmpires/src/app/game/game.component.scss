@@ -1,0 +1,23 @@
+.game{
+    height: 100%;
+
+    .container {
+        display: flex;
+        height: 100%;
+        background: black;
+      }
+      
+      .build-order {
+        width: 25%; /* A fixed width as the default */
+        height: 100%;
+        max-height: 100%;
+        background: brown;
+      }
+      
+      .player { 
+        flex-grow: 1; /* Set the middle element to grow and stretch */
+        height: 100%;
+        max-height: 100%;
+        background: burlywood;
+      }
+}

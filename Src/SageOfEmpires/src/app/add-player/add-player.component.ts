@@ -3,7 +3,7 @@ import { CivService } from '../services/civ.service';
 import { FormControl } from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
-import { Civ, Player, Opponent } from '../model';
+import { ICiv, Player, Opponent } from '../model';
 import { GameService } from '../services/game.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class AddPlayerComponent implements OnInit {
   @Input() isOpponent: boolean;
 
   civControl = new FormControl();
-  filteredOptions: Observable<Civ[]>;
+  filteredOptions: Observable<ICiv[]>;
 
   constructor(public civService: CivService, public gameService: GameService) { }
 

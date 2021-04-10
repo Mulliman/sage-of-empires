@@ -1,8 +1,8 @@
 type Nullable<T> = T | null;
 
-export class Civ
+export interface ICiv
 {
-    name;
+    readonly name: string;
 }
 
 export class PlayerColour {
@@ -36,7 +36,7 @@ export class TeamColourOptions{
 
 export class Player
 {
-    constructor(public civ: Civ) {}
+    constructor(public civ: ICiv) {}
 
     playerColour?: PlayerColour;
     team?: number;
@@ -59,3 +59,18 @@ export class Opponent extends Player
 {
 }
 
+export interface IBuildOrder
+{
+    readonly name: string;
+    readonly steps: BuildOrderStep[];
+    readonly recommendedCivs?: ICiv[];
+}
+
+export class BuildOrderStep
+{
+    villagerCount?: string;
+    idealTimeInSeconds?: number;
+    details?: string;
+    footnote?: string;
+    imageUrl?: string;
+}

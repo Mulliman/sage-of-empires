@@ -16,6 +16,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { CommonModule } from '@angular/common';
 import { AddPlayerComponent } from './add-player/add-player.component';
 import { ColourChooserComponent } from './colour-chooser/colour-chooser.component';
+import { ChooseBuildOrderComponent } from './choose-build-order/choose-build-order.component';
+import { IsRecommendedPipe } from './pipes/is-recommended.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ColourChooserComponent } from './colour-chooser/colour-chooser.componen
     PlayerComponent,
     GameComponent,
     AddPlayerComponent,
-    ColourChooserComponent
+    ColourChooserComponent,
+    ChooseBuildOrderComponent,
+    IsRecommendedPipe
   ],
   imports: [
     CommonModule,
