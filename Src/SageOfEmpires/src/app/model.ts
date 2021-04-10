@@ -132,7 +132,8 @@ export enum GameSpeeds {
     Slow = 1,
     Casual = 1.5,
     Normal = 1.7,
-    Fast = 2
+    Fast = 2,
+    Demo = 5
 }
 
 export class GameSpeedOptions{
@@ -141,5 +142,6 @@ export class GameSpeedOptions{
         new GameSpeed("Casual", GameSpeeds.Casual),
         new GameSpeed("Normal", GameSpeeds.Normal),
         new GameSpeed("Fast", GameSpeeds.Fast),
+        new GameSpeed("Demo", GameSpeeds.Demo),
     ];
 }
