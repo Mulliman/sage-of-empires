@@ -12,6 +12,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     }
 }
 
+.full-width-button{
+    width: 100%;
+    display: block;
+}
+
+::ng-deep .full-width-button-in-list{
+    margin-top: 21px;
+}
+
+.full-width-image{
+    max-width: 100%;
+    width: 100%;
+}
+
 /* Material additions */
 
 .mat-card-avatar.large-avatar{
@@ -141,6 +155,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .margin-top{
     margin-top: 20px;
+}
+
+.margin-top-small{
+    margin-top: 10px;
+}
+
+.margin-top-tiny{
+    margin-top: 5px;
 }
 
 .margin-bottom{

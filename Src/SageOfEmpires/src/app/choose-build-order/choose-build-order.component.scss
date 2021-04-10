@@ -1,0 +1,13 @@
+.build-order-card{
+    &.suggested{
+        border: 2px solid goldenrod;
+
+        button{
+            border: 1px solid goldenrod;
+        }
+    }
+
+    ::ng-deep .mat-card-header-text{
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,22 @@
+.game-timer{
+    .clock{
+        text-align: center;
+
+        time{
+            width: 100%;
+            text-align: center;
+        }
+
+        ::ng-deep .mat-card-header-text {
+            margin: 0 auto;
+        }
+    }
+
+    .mat-card-header-text{
+        width: 100%;
+    }
+
+    ::ng-deep .mat-button-toggle-label-content {
+        line-height: 24px !important;
+    }
+}
