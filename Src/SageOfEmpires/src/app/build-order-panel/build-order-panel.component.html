@@ -1,0 +1,24 @@
+<mat-tab-group dynamicHeight [selectedIndex]="selected.value" (selectedIndexChange)="selected.setValue($event)">
+    <mat-tab label="Choose build order">
+      <div>
+        <app-choose-build-order></app-choose-build-order>
+      </div>
+    </mat-tab>
+    <mat-tab label="Plan">
+      <div>
+        <div *ngIf="buildOrderService.selectedBuildOrder">
+            <h3>{{buildOrderService.selectedBuildOrder.name}}</h3>
+        
+            <ul class="build-order-steps">
+                <li class="build-order-step" *ngFor="let step of buildOrderService.selectedBuildOrder.steps">
+                    <div class="villager-count">{{step.villagerCount}}</div>
+                    <div class="step-details">
+                        <p class="details">{{step.details}}</p>
+                        <p class="footnote" *ngIf="step.footnote">{{step.footnote}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>

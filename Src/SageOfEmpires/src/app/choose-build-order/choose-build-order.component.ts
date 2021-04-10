@@ -16,6 +16,6 @@ export class ChooseBuildOrderComponent implements OnInit {
   }
 
   selectBuildOrder(buildOrder: IBuildOrder){
-    
+    this.buildOrderService.setSelectedBuildOrder(buildOrder);
   }
 }

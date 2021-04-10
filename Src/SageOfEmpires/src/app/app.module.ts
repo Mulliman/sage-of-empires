@@ -12,12 +12,14 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { CommonModule } from '@angular/common';
 import { AddPlayerComponent } from './add-player/add-player.component';
 import { ColourChooserComponent } from './colour-chooser/colour-chooser.component';
 import { ChooseBuildOrderComponent } from './choose-build-order/choose-build-order.component';
 import { IsRecommendedPipe } from './pipes/is-recommended.pipe';
+import { BuildOrderPanelComponent } from './build-order-panel/build-order-panel.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { IsRecommendedPipe } from './pipes/is-recommended.pipe';
     AddPlayerComponent,
     ColourChooserComponent,
     ChooseBuildOrderComponent,
-    IsRecommendedPipe
+    IsRecommendedPipe,
+    BuildOrderPanelComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +44,8 @@ import { IsRecommendedPipe } from './pipes/is-recommended.pipe';
     // Material
     MatGridListModule,
     MatAutocompleteModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

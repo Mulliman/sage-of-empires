@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Output, EventEmitter } from '@angular/core';
 import { IBuildOrder, BuildOrderStep, ICiv } from '../model';
 import { Aztecs, Berbers, Britons } from './civ.service';
 
@@ -6,6 +6,10 @@ import { Aztecs, Berbers, Britons } from './civ.service';
   providedIn: 'root'
 })
 export class BuildOrderService {
+
+  @Output() onBuildOrderSelected = new EventEmitter<IBuildOrder>();
+
+  selectedBuildOrder: IBuildOrder;
 
   public buildOrders: IBuildOrder[] = [
     new DrushFastCastleBuildOrder(),
@@ -16,6 +20,12 @@ export class BuildOrderService {
 
   getRecommendedBuildOrders(civ: ICiv) : IBuildOrder[]{
     return this.buildOrders.filter(bo => bo.name == civ.name);
+  }
+
+  setSelectedBuildOrder(buildOrder: IBuildOrder){
+    this.selectedBuildOrder = buildOrder;
+
+    this.onBuildOrderSelected.emit(this.selectedBuildOrder);
   }
 }
 
