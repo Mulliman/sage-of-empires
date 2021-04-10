@@ -14,6 +14,8 @@ export class CivDetailsComponent implements OnInit {
   constructor(public gameService: GameService) { }
 
   ngOnInit(): void {
+    console.log(this.civ.civBonuses);
+    
   }
 
 }
