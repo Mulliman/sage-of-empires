@@ -10,7 +10,7 @@
             <h3>{{buildOrderService.selectedBuildOrder.name}}</h3>
         
             <ul class="build-order-steps">
-                <li class="build-order-step" *ngFor="let step of buildOrderService.selectedBuildOrder.steps">
+                <li class="build-order-step" [appBuildOrderTarget] [idealTime]="step.idealTimeInSeconds" *ngFor="let step of buildOrderService.selectedBuildOrder.steps">
                     <div class="villager-count">{{step.villagerCount}}</div>
                     <div class="step-details">
                         <p class="details">{{step.details}}</p>

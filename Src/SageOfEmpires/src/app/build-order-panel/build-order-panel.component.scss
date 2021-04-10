@@ -1,0 +1,19 @@
+.build-order-steps{
+    .build-order-step{
+        &.gold{
+            background: goldenrod;
+        }
+
+        &.silver{
+            background: silver;
+        }
+
+        &.bronze{
+            background: peru;
+        }
+
+        &.bad{
+            background: black;
+        }
+    }
+}
