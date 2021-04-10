@@ -1,6 +1,6 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import { IBuildOrder, BuildOrderStep, ICiv } from '../model';
-import { Aztecs, Berbers, Britons } from './civ.service';
+import { Britons, Aztecs } from '../civs';
 
 @Injectable({
   providedIn: 'root'
@@ -65,7 +65,6 @@ export class ArcherRushBuildOrder implements IBuildOrder {
   ];
 
   recommendedCivs = [
-    new Britons(),
-    new Berbers()
+    new Britons()
   ];
 }

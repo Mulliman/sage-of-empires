@@ -3,6 +3,29 @@ type Nullable<T> = T | null;
 export interface ICiv
 {
     readonly name: string;
+
+    readonly armyType: string;
+
+    readonly uniqueUnits: IUnit[];
+
+    readonly castleTech: ITech;
+    readonly imperialTech: ITech;
+
+    readonly teamBonus: string;
+    readonly civBonuses: string[];
+}
+
+export interface IUnit
+{
+    name: string;
+    strengths: string;
+    weaknesses: string;
+}
+
+export interface ITech
+{
+    name: string;
+    details: string;
 }
 
 export class PlayerColour {

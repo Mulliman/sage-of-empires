@@ -1,0 +1,43 @@
+<div class="civ-details">
+    <h2 class="civ-name">{{civ.name}} <span class="civ-type">({{civ.armyType}})</span></h2>
+    
+
+    <div class="civ-unique-unit">
+        <h4>Unique units</h4>
+        <ul>
+            <li *ngFor="let unit of civ.uniqueUnits">
+                <h5>{{unit.name}}</h5>
+                <p class="unit-strength">{{unit.strengths}}</p>
+                <p class="unit-weakness">{{unit.weaknesses}}</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="civ-techs">
+        <h4>Techs</h4>
+        <ul>
+            <li>
+                <h5>Castle Age - {{civ.castleTech.name}}</h5>
+                <p>{{civ.castleTech.details}}</p>
+            </li>
+            <li>
+                <h5>
+                    Imperial Age - {{civ.imperialTech.name}}
+                </h5>
+                <p>{{civ.castleTech.details}}</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="civ-bonuses">
+        <h4>Bonuses</h4>
+        <ul>
+            <li *ngFor="let bonus of civ.civBonuses">{{bonus}}</li>
+        </ul>
+
+        <h4>Team bonus</h4>
+        <ul>
+            <li>{{civ.teamBonus}}</li>
+        </ul>
+    </div>
+</div>

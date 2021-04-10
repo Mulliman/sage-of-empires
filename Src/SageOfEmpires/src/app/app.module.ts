@@ -20,6 +20,7 @@ import { ColourChooserComponent } from './colour-chooser/colour-chooser.componen
 import { ChooseBuildOrderComponent } from './choose-build-order/choose-build-order.component';
 import { IsRecommendedPipe } from './pipes/is-recommended.pipe';
 import { BuildOrderPanelComponent } from './build-order-panel/build-order-panel.component';
+import { CivDetailsComponent } from './civ-details/civ-details.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { BuildOrderPanelComponent } from './build-order-panel/build-order-panel.
     ColourChooserComponent,
     ChooseBuildOrderComponent,
     IsRecommendedPipe,
-    BuildOrderPanelComponent
+    BuildOrderPanelComponent,
+    CivDetailsComponent
   ],
   imports: [
     CommonModule,

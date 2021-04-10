@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ICiv } from '../model';
 import { importExpr } from '@angular/compiler/src/output/output_ast';
+import { Aztecs, Britons } from '../civs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +10,7 @@ export class CivService {
 
   public civs: Array<ICiv> = [
     new Aztecs(),
-    new Berbers(),
-    new Britons(),
-    new Byzantines()
+    new Britons()
   ]
 
   constructor() { }
@@ -29,22 +28,3 @@ export class CivService {
   }
 }
 
-export class Aztecs implements ICiv{
-  name: any = "Aztecs";
-
-}
-
-export class Berbers implements ICiv{
-  name: any = "Berbers";
-
-}
-
-export class Britons implements ICiv{
-  name: any = "Britons";
-
-}
-
-export class Byzantines implements ICiv{
-  name: any = "Byzantines";
-
-}
