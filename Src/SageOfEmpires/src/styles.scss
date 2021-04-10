@@ -47,6 +47,43 @@ html {
 }
 
 
+/* Spacing */
+
+.padding{
+    padding: 20px;
+}
+
+.no-padding-top{
+    padding-top: 0 !important;
+}
+
+.padding-top{
+    padding-top: 20px;
+}
+
+.padding-bottom{
+    padding-bottom: 20px;
+}
+
+.margin{
+    margin: 20px;
+}
+
+.margin-top{
+    margin-top: 20px;
+}
+
+.margin-top-small{
+    margin-top: 10px;
+}
+
+.margin-top-tiny{
+    margin-top: 5px;
+}
+
+.margin-bottom{
+    margin-bottom: 20px;
+}
 
 
 
@@ -150,34 +187,3 @@ html {
     color: black;
 }
 
-.padding{
-    padding: 20px;
-}
-
-.padding-top{
-    padding-top: 20px;
-}
-
-.padding-bottom{
-    padding-bottom: 20px;
-}
-
-.margin{
-    margin: 20px;
-}
-
-.margin-top{
-    margin-top: 20px;
-}
-
-.margin-top-small{
-    margin-top: 10px;
-}
-
-.margin-top-tiny{
-    margin-top: 5px;
-}
-
-.margin-bottom{
-    margin-bottom: 20px;
-}

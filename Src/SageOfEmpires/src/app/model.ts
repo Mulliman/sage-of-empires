@@ -119,7 +119,7 @@ export class BuildOrderStep
     villagerCount?: string;
     idealTimeInSeconds?: number;
     details?: string;
-    footnote?: string;
+    footnotes?: string[];
     imageUrl?: string;
 }
 

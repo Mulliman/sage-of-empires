@@ -1,5 +1,5 @@
 <div class="build-order-panel margin" #divToScroll>
-  <div >
+  <div>
     <mat-tab-group dynamicHeight [selectedIndex]="selected.value" (selectedIndexChange)="selected.setValue($event)">
       <mat-tab label="Choose build order">
         <div>
@@ -10,20 +10,24 @@
         <div>
           <div *ngIf="buildOrderService.selectedBuildOrder">
             <h3 class="selected-build-order padding">{{buildOrderService.selectedBuildOrder.name}}</h3>
-          
-              <ul class="build-order-steps">
-                  <li class="build-order-step" [appBuildOrderTarget] [idealTime]="step.idealTimeInSeconds" attr.data-scroll-to-seconds="{{step.idealTimeInSeconds}}" *ngFor="let step of buildOrderService.selectedBuildOrder.steps">
-                      <div class="villager-count">{{step.villagerCount}}</div>
-                      <div class="step-details">
-                          <p class="details">{{step.details}}</p>
-                          <p class="footnote" *ngIf="step.footnote">&rarr; {{step.footnote}}</p>
-                      </div>
-                  </li>
-              </ul>
+
+            <ul class="build-order-steps">
+              <li class="build-order-step" [appBuildOrderTarget] [idealTime]="step.idealTimeInSeconds"
+                attr.data-scroll-to-seconds="{{step.idealTimeInSeconds}}"
+                *ngFor="let step of buildOrderService.selectedBuildOrder.steps">
+                <div class="villager-count">{{step.villagerCount}}</div>
+                <div class="step-details">
+                  <p class="details">{{step.details}}</p>
+                  <div *ngIf="step.footnotes">
+                    <p class="footnote" *ngFor="let footnote of step.footnotes">&rarr; {{footnote}}</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </mat-tab>
     </mat-tab-group>
   </div>
-  
+
 </div>
