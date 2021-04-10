@@ -43,4 +43,12 @@ export class GameService {
     this.isPlaying = false;
     clearInterval(this.interval);
   }
+
+  toggleStartPause(){
+    if(this.isPlaying){
+      this.pause();
+    }else{
+      this.start();
+    }
+  }
 }

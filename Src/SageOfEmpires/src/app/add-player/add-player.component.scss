@@ -1,4 +1,19 @@
 .add-player{
-    background: #eee;
+    height: 100%;
+    display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
 
+input{
+    font-size: 18px;
+    border: 2px solid #000;
+    background: #CCC;
+    color: #000;
+    padding:20px;
+
+    &:focus{
+        background: #FFF;
+    }
+}
 }

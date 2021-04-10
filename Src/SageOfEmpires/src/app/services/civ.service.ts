@@ -26,7 +26,15 @@ export class CivService {
 }
 
   public filterCivsByName(input:string): ICiv[]{
+    if(!input){
+      return this.civs;
+    }
+
       const filterValue = input.toLowerCase();
+
+      if(!filterValue){
+        return this.civs;
+      }
   
       return this.civs.filter(c => c.name.toLowerCase().includes(filterValue));
   }

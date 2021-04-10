@@ -1,12 +1,11 @@
-<div class="add-player">
-    <input type="text"
-           placeholder="{{getCivPlaceholder()}}"
-           matInput
-           [formControl]="civControl"
-           [matAutocomplete]="auto">
+<div class="add-player" (click)="focus()">
+  <div>
+    <input type="text" #addPlayerInput placeholder="{{getCivPlaceholder()}}" matInput [formControl]="civControl"
+      [matAutocomplete]="auto">
     <mat-autocomplete #auto="matAutocomplete" (optionSelected)='selectCiv($event.option.value)'>
-        <mat-option *ngFor="let civ of civService.civs" [value]="civ.name">
-          {{civ.name}}
-        </mat-option>
-      </mat-autocomplete>
+      <mat-option *ngFor="let civ of filteredOptions | async" [value]="civ.name">
+        {{civ.name}}
+      </mat-option>
+    </mat-autocomplete>
+  </div>
 </div>
