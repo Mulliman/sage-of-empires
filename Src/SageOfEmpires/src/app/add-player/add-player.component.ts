@@ -33,8 +33,8 @@ export class AddPlayerComponent implements OnInit {
 
   getCivPlaceholder() {
     return !this.isOpponent
-      ? "Your civ..."
-      : "Opponent civ..."
+      ? "Pick your civ..."
+      : "Pick opponent civ..."
   }
 
   selectCiv(civName) {

@@ -1,6 +1,6 @@
 <div class="add-player" (click)="focus()">
   <div>
-    <input type="text" #addPlayerInput placeholder="{{getCivPlaceholder()}}" matInput [formControl]="civControl"
+    <input type="text" class="" #addPlayerInput placeholder="{{getCivPlaceholder()}}" matInput [formControl]="civControl"
       [matAutocomplete]="auto">
     <mat-autocomplete #auto="matAutocomplete" (optionSelected)='selectCiv($event.option.value)'>
       <mat-option *ngFor="let civ of filteredOptions | async" [value]="civ.name">

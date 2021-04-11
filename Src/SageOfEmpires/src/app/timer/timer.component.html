@@ -12,7 +12,17 @@
 
     <div class="margin">
         <button mat-raised-button color="primary" *ngIf="!gameService.isPlaying" (click)="gameService.start()" class="full-width-button">Start the game already!</button>
-        <button mat-raised-button color="accent" *ngIf="gameService.isPlaying" (click)="gameService.pause()" class="full-width-button">Pause</button>
+        
+        <div *ngIf="gameService.isPlaying">
+            <div class="fifty-fifty">
+                <div>
+                    <button mat-raised-button color="primary"  (click)="gameService.pause()" class="almost-full-width-button">Pause</button>
+                </div>
+                <div>
+                    <button mat-raised-button color="warn" (click)="gameService.gg()" class="almost-full-width-button">End game</button>
+               </div>
+           </div>
+        </div>
     </div>
     
 </div>

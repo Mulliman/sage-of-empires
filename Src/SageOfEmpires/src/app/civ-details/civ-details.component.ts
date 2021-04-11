@@ -30,4 +30,13 @@ export class CivDetailsComponent implements OnInit {
     this.hasCompletedSettingsOnce = true;
   }
 
+  unpickCiv(){
+    if(this.isPlayer){
+      this.gameService.player = null;
+    } else{
+      this.gameService.opponent = null;
+    }
+    
+  }
+
 }

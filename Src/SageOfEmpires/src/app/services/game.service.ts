@@ -51,4 +51,11 @@ export class GameService {
       this.start();
     }
   }
+
+  gg(){
+    this.isPlaying = false;
+    clearInterval(this.interval);
+
+    location.replace("/");
+  }
 }

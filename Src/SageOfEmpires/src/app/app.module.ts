@@ -30,6 +30,7 @@ import { CivDetailsComponent } from './civ-details/civ-details.component';
 import { GameTimePipe } from './pipes/game-time.pipe';
 import { TimerComponent } from './timer/timer.component';
 import { BuildOrderTargetDirective } from './directives/build-order-target.directive';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { BuildOrderTargetDirective } from './directives/build-order-target.direc
     CivDetailsComponent,
     GameTimePipe,
     TimerComponent,
-    BuildOrderTargetDirective
+    BuildOrderTargetDirective,
+    HomeComponent
   ],
   imports: [
     CommonModule,

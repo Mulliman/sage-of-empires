@@ -7,6 +7,10 @@ html {
     scroll-behavior: smooth;
   }
 
+  .cursor-pointer{
+      cursor: pointer;
+  }
+
 ::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
@@ -30,6 +34,11 @@ html {
     display: block;
 }
 
+.almost-full-width-button{
+    width: 95%;
+    display: block;
+}
+
 ::ng-deep .full-width-button-in-list{
     margin-top: 21px;
 }
@@ -38,6 +47,23 @@ html {
     max-width: 100%;
     width: 100%;
 }
+
+/* Text */
+
+.sage-of-empires{
+    .serif{
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .gold-text{
+        color: #BD9049;
+    }
+
+    .gold-border{
+        border: 1px solid #BD9049;
+    }
+}
+
 
 /* Material additions */
 
