@@ -1,10 +1,13 @@
-import { Injectable } from '@angular/core';
-import { Player, Opponent, GameSpeeds, GameSpeed } from '../model';
+import { Injectable, Output, EventEmitter } from '@angular/core';
+import { Player, Opponent, GameSpeeds, GameSpeed, PlayerColour } from '../model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GameService {
+
+  @Output() onPlayerColourChanged = new EventEmitter<PlayerColour>();
+  @Output() onOpponentColourChanged = new EventEmitter<PlayerColour>();
 
   player: Player;
   opponent: Opponent;
@@ -20,8 +23,31 @@ export class GameService {
     this.player = player;
   }
 
+  setPlayerColour(colour: PlayerColour){
+    if(!this.player){
+      return;
+    }
+
+    console.log("setPlayerColour", colour);
+
+    this.player.playerColour = colour;
+    this.onPlayerColourChanged.emit(this.player.playerColour);
+  }
+
   setOpponent(opponent: Opponent){
     this.opponent = opponent;
+  }
+
+  setOpponentColour(colour: PlayerColour){
+
+    console.log("setOpponentColour", colour);
+    
+    if(!this.opponent){
+      return;
+    }
+
+    this.opponent.playerColour = colour;
+    this.onOpponentColourChanged.emit(this.opponent.playerColour);
   }
 
   setGameSpeed(speed: GameSpeed){

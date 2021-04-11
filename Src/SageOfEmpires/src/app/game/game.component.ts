@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
-import { Player, Opponent } from '../model';
+import { Player, Opponent, PlayerColours, TeamColourOptions, PlayerColourConstants } from '../model';
 import { MatGridList, MatGridTile } from '@angular/material/grid-list';
 import { GameService } from '../services/game.service';
 import { BuildOrderService } from '../services/build-order.service';
@@ -75,7 +75,7 @@ export class GameComponent implements OnInit {
 
 @Component({
   selector: 'cli-dialog',
-  template: "<h1>Press some keys</h1>"
+  template: "<h1>Press hotkeys</h1><p>E.g. <ul class='list-no-space'><li><strong>14</strong> starts the game</li><li><strong>gg</strong> ends the game</li></ul>"
 })
 export class CliDialog {
 
@@ -84,8 +84,37 @@ export class CliDialog {
   command: string = "";
 
   commands: { str: string, f: () => void }[] = [
-    { str: "14", f: () => { this.gameService.toggleStartPause(); } }
+    { str: "aa", f: () => { this.focusOnPlayerBox() } },
+    { str: "a1", f: () => { console.log("colour", PlayerColourConstants.blue1); this.gameService.setPlayerColour(PlayerColourConstants.blue1); } },
+    { str: "a2", f: () => { this.gameService.setPlayerColour(PlayerColourConstants.red2); } },
+    { str: "a3", f: () => { this.gameService.setPlayerColour(PlayerColourConstants.green3); } },
+    { str: "a4", f: () => { this.gameService.setPlayerColour(PlayerColourConstants.yellow4); } },
+    { str: "a5", f: () => { this.gameService.setPlayerColour(PlayerColourConstants.cyan5); } },
+    { str: "a6", f: () => { this.gameService.setPlayerColour(PlayerColourConstants.pink6); } },
+    { str: "a7", f: () => { this.gameService.setPlayerColour(PlayerColourConstants.grey7); } },
+    { str: "a8", f: () => { this.gameService.setPlayerColour(PlayerColourConstants.orange8); } },
+    { str: "s1", f: () => { this.gameService.setOpponentColour(PlayerColourConstants.blue1); } },
+    { str: "s2", f: () => { this.gameService.setOpponentColour(PlayerColourConstants.red2); } },
+    { str: "s3", f: () => { this.gameService.setOpponentColour(PlayerColourConstants.green3); } },
+    { str: "s4", f: () => { this.gameService.setOpponentColour(PlayerColourConstants.yellow4); } },
+    { str: "s5", f: () => { this.gameService.setOpponentColour(PlayerColourConstants.cyan5); } },
+    { str: "s6", f: () => { this.gameService.setOpponentColour(PlayerColourConstants.pink6); } },
+    { str: "s7", f: () => { this.gameService.setOpponentColour(PlayerColourConstants.grey7); } },
+    { str: "s8", f: () => { this.gameService.setOpponentColour(PlayerColourConstants.orange8); } },
+    { str: "14", f: () => { this.gameService.toggleStartPause(); } },
+    { str: "gg", f: () => { this.gameService.gg(); } }
   ];
+
+  focusOnPlayerBox(){
+    var el: any = document.querySelector(".player-box");
+
+    if(el){
+      setTimeout(() => {
+        el.focus();
+      }, 100);
+      
+    }
+  }
 
   constructor(public civService: CivService,
     public gameService: GameService,
@@ -109,7 +138,7 @@ export class CliDialog {
   doCommand(value) {
     console.log("doCommand", this.command);
 
-    var match = this.commands.find(c => c.str == this.command);
+    var match = this.commands.find(c => this.command.endsWith(c.str));
 
     if (match) {
       console.log("doCommand - match", match);

@@ -69,17 +69,28 @@ export enum PlayerColours {
     Orange = 8
 }
 
-export class TeamColourOptions{
-    public static array: PlayerColour[] = [
-        new PlayerColour("Blue", PlayerColours.Blue),
-        new PlayerColour("Red", PlayerColours.Red),
-        new PlayerColour("Green", PlayerColours.Green),
-        new PlayerColour("Yellow", PlayerColours.Yellow),
-        new PlayerColour("Cyan", PlayerColours.Cyan),
-        new PlayerColour("Pink", PlayerColours.Pink),
-        new PlayerColour("Grey", PlayerColours.Grey),
-        new PlayerColour("Orange", PlayerColours.Orange)
-    ];
+export const PlayerColourConstants = {
+    blue1: new PlayerColour("Blue", PlayerColours.Blue),
+    red2: new PlayerColour("Red", PlayerColours.Red),
+    green3: new PlayerColour("Green", PlayerColours.Green),
+    yellow4: new PlayerColour("Yellow", PlayerColours.Yellow),
+    cyan5: new PlayerColour("Cyan", PlayerColours.Cyan),
+    pink6: new PlayerColour("Pink", PlayerColours.Pink),
+    grey7: new PlayerColour("Grey", PlayerColours.Grey),
+    orange8: new PlayerColour("Orange", PlayerColours.Orange),
+}
+
+export const TeamColourOptions = {
+    array: [
+        PlayerColourConstants.blue1, 
+        PlayerColourConstants.red2, 
+        PlayerColourConstants.green3,
+        PlayerColourConstants.yellow4,
+        PlayerColourConstants.cyan5,
+        PlayerColourConstants.pink6,
+        PlayerColourConstants.grey7,
+        PlayerColourConstants.orange8
+    ]
 }
 
 export class Player
