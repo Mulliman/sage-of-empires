@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ICiv } from '../model';
 import { importExpr } from '@angular/compiler/src/output/output_ast';
-import { Aztecs, Britons } from '../civs';
+import { Aztecs, Britons, Byzantines, Celts, Chinese, Franks, Goths, Japanese, Mongols, Persians, Saracens, Teutons, Turks, Vikings, Huns, Koreans, Mayans, Spanish, Incas, Indians, Italians, Magyars, Slavs, Berbers, Ethiopians, Malians, Portuguese, Burmese, Khmer, Malay, Vietnamese, Bulgarians, Cumans, Lithuanians, Tatars, Burgundians, Sicilians } from '../civs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,42 @@ export class CivService {
 
   public civs: Array<ICiv> = [
     new Aztecs(),
-    new Britons()
+    new Berbers(),
+    new Britons(),
+    new Bulgarians(),
+    new Burgundians(),
+    new Burmese(),
+    new Byzantines(),
+    new Celts(),
+    new Chinese(),
+    new Cumans(),
+    new Ethiopians(),
+    new Franks(),
+    new Goths(),
+    new Huns(),
+    new Incas(),
+    new Indians(),
+    new Italians(),
+    new Japanese(),
+    new Lithuanians(),
+    new Khmer(),
+    new Koreans(),
+    new Magyars(),
+    new Malians(),
+    new Malay(),
+    new Mayans(),
+    new Mongols(),
+    new Persians(),
+    new Portuguese(),
+    new Saracens(),
+    new Sicilians(),
+    new Slavs(),
+    new Spanish(),
+    new Tatars(),
+    new Teutons(),
+    new Turks(),
+    new Vietnamese(),
+    new Vikings(),
   ]
 
   constructor() { }

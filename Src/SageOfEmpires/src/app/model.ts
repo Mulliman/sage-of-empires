@@ -27,7 +27,7 @@ export abstract class CivBase implements ICiv
    abstract teamBonus: string;
    abstract civBonuses: string[];
 
-   getIconPath () { return "/assets/images/civs/CivIcon-" + this.name + ".webp" };
+   getIconPath () { return "/assets/images/civs/civicon-" + this.name.toLowerCase() + ".webp" };
 } 
 
 export interface IUnit
@@ -44,7 +44,7 @@ export abstract class UnitBase implements IUnit{
     abstract strengths: string;
     abstract weaknesses: string;
 
-    getIconPath () { return "/assets/images/units/" + this.name.replace(" ","") + "Icon-DE.webp" };
+    getIconPath () { return "/assets/images/units/" + this.name.replace(/ /g,"").toLowerCase() + "icon-de.webp" };
 }
 
 export interface ITech
