@@ -20,7 +20,11 @@ export class GameService {
   constructor() { }
 
   setPlayer(player: Player){
+    var existingColour = this.player ? this.player.playerColour : null;
+
     this.player = player;
+
+    if(existingColour) this.setPlayerColour(existingColour);
   }
 
   setPlayerColour(colour: PlayerColour){
@@ -35,7 +39,11 @@ export class GameService {
   }
 
   setOpponent(opponent: Opponent){
+    var existingColour = this.opponent ? this.opponent.playerColour : null;
+
     this.opponent = opponent;
+
+    if(existingColour) this.setOpponentColour(existingColour);
   }
 
   setOpponentColour(colour: PlayerColour){
