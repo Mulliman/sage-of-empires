@@ -19,4 +19,16 @@
     ::ng-deep .units-list-expansion-panel .mat-expansion-panel-body{
         padding-bottom: 0;
     }
+
+    .bonus-list{
+        ::ng-deep .mat-card-header-text{
+            margin-left: 0;
+        }
+
+        ul{
+            margin-top:0;
+            padding-left:20px;
+            padding-right: 10px;
+        }
+    }
 }
