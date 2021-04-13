@@ -1,19 +1,66 @@
-.add-player{
-    height: 100%;
-    display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+.add-player {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-input{
-    font-size: 18px;
-    border: 2px solid #000;
-    background: #CCC;
-    color: #000;
-    padding:20px;
+  .civs {
+    width: 95%;
+    box-sizing: border-box;
+    text-align: center;
+  }
 
-    &:focus{
-        background: #FFF;
+  .civ-search {
+    padding-top: 20px;
+
+    input {
+      font-size: 18px;
+      border: 2px solid #000;
+      background: #ccc;
+      color: #000;
+      padding: 20px;
+
+      &:focus {
+        background: #fff;
+      }
     }
-}
+  }
+
+  .icon-grid {
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 10px;
+    grid-row-start: 1;
+    grid-row-end: 4;
+
+    a {
+      text-align: center;
+      cursor: pointer;
+      padding: 7px 5px 5px;
+
+      &:hover {
+        background: #111;
+      }
+
+      img {
+        max-width: 50px;
+        margin: 0;
+      }
+
+      h5 {
+        text-align: center;
+        color: #CCC;
+        margin: 0;
+
+        &::first-letter{
+            font-size: 150%;
+            color: rgb(255, 235, 123);
+        }
+      }
+    }
+  }
 }

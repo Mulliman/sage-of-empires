@@ -1,11 +1,20 @@
 <div class="add-player" (click)="focus()">
-  <div>
-    <input type="text" class="{{isOpponent ? 'opponent-box' : 'player-box'}}" #addPlayerInput placeholder="{{getCivPlaceholder()}}" matInput [formControl]="civControl"
-      [matAutocomplete]="auto">
-    <mat-autocomplete #auto="matAutocomplete" (optionSelected)='selectCiv($event.option.value)'>
-      <mat-option *ngFor="let civ of filteredOptions | async" [value]="civ.name">
-        {{civ.name}}
-      </mat-option>
-    </mat-autocomplete>
+  <div class="civs">
+    <div class="icon-grid">
+      <a *ngFor="let civ of filteredOptions | async" (click)='selectCiv(civ.name)'>
+        <img src="{{civ.getIconPath()}}" />
+        <h5>{{civ.name}}</h5>
+      </a>
+    </div>
+
+    <div class="civ-search">
+      <input type="text" class="{{isOpponent ? 'opponent-box' : 'player-box'}}" #addPlayerInput
+        placeholder="{{getCivPlaceholder()}}" matInput [formControl]="civControl" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)='selectCiv($event.option.value)'>
+        <mat-option *ngFor="let civ of filteredOptions | async" [value]="civ.name">
+          <img src="{{civ.getIconPath()}}" width="14px" height="14px" /> {{civ.name}}
+        </mat-option>
+      </mat-autocomplete>
+    </div>
   </div>
 </div>

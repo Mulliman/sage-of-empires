@@ -31,6 +31,7 @@ import { GameTimePipe } from './pipes/game-time.pipe';
 import { TimerComponent } from './timer/timer.component';
 import { BuildOrderTargetDirective } from './directives/build-order-target.directive';
 import { HomeComponent } from './home/home.component';
+import { ResourceCostsComponent } from './resource-costs/resource-costs.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { HomeComponent } from './home/home.component';
     GameTimePipe,
     TimerComponent,
     BuildOrderTargetDirective,
-    HomeComponent
+    HomeComponent,
+    ResourceCostsComponent
   ],
   imports: [
     CommonModule,

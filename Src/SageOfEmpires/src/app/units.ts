@@ -1,16 +1,17 @@
-import { IUnit, UnitBase } from './model';
+import { IUnit, UnitBase, Food, Gold, Wood } from './model';
 
 export class JaguarWarrior extends UnitBase{
     strengths: string = "Good vs other infantry.";
     weaknesses: string = "Weak vs archers, cannoneers, and heavy cavalry.";
     name: any = "Jaguar Warrior";
-  
+    costs = [ new Food(60), new Gold(30)]
   }
   
 export class Longbowman extends UnitBase{
     strengths: string = "Very long range and good vs infantry. Best when massed.";
     weaknesses: string = "Weak vs cavalry, huskarls, eagle warriors, skirmishers and siege.";
     name: any = "Longbowman";
+    costs = [ new Wood(35), new Gold(40)]
 }
   
 export class Cataphract extends UnitBase{

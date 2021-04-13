@@ -35,6 +35,8 @@ export interface IUnit
     name: string;
     strengths: string;
     weaknesses: string;
+    costs?: IResourceCost[];
+    availableAge?: Age;
 
     getIconPath();
 }
@@ -43,8 +45,61 @@ export abstract class UnitBase implements IUnit{
     abstract name: string;
     abstract strengths: string;
     abstract weaknesses: string;
+    costs?: IResourceCost[];
+    availableAge?: Age;
 
     getIconPath () { return "/assets/images/units/" + this.name.replace(/ /g,"").toLowerCase() + "icon-de.webp" };
+}
+
+export enum Age {
+    Dark = "dark",
+    Feudal = "feudal",
+    Castle = "castle",
+    Imperial = "imperial"
+}
+
+export enum Resource {
+    Wood = "w",
+    Food = "f",
+    Gold = "g",
+    Stone = "s"
+}
+
+export interface IResourceCost {
+    resource: Resource;
+    cost: number;
+}
+
+export class Wood implements IResourceCost{
+    resource: Resource;
+
+    constructor(public cost: number){
+        this.resource = Resource.Wood;
+    }
+}
+
+export class Food implements IResourceCost{
+    resource: Resource;
+
+    constructor(public cost: number){
+        this.resource = Resource.Food;
+    }
+}
+
+export class Gold implements IResourceCost{
+    resource: Resource;
+
+    constructor(public cost: number){
+        this.resource = Resource.Gold;
+    }
+}
+
+export class Stone implements IResourceCost{
+    resource: Resource;
+
+    constructor(public cost: number){
+        this.resource = Resource.Stone;
+    }
 }
 
 export interface ITech

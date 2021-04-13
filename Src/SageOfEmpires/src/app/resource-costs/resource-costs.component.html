@@ -1,0 +1,3 @@
+<span *ngIf="costs">
+    (<span *ngFor="let cost of costs" class="{{('resource resource-' + cost.resource).toLowerCase()}}">{{cost.cost}}{{cost.resource}}</span>)
+</span>
