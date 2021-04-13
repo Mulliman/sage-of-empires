@@ -15,4 +15,8 @@
         background: #555;
         color: #999;
     }
+
+    ::ng-deep .units-list-expansion-panel .mat-expansion-panel-body{
+        padding-bottom: 0;
+    }
 }

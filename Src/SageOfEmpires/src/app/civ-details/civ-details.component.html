@@ -26,7 +26,7 @@
 
             </mat-expansion-panel>
 
-            <mat-expansion-panel [expanded]="true">
+            <mat-expansion-panel [expanded]="true" class="units-list-expansion-panel">
                 <mat-expansion-panel-header>
                     <mat-panel-title>
                         Unique units
@@ -36,9 +36,8 @@
                     </mat-panel-description>
                 </mat-expansion-panel-header>
 
-                <div *ngFor="let unit of civ.uniqueUnits">
-
-                    <mat-card class="mat-elevation-z0 no-padding">
+                <div *ngFor="let unit of civ.uniqueUnits" class="units-list">
+                    <mat-card class="mat-elevation-z0 no-padding-top no-padding-sides">
                         <mat-card-header>
                             <div mat-card-avatar class="large-avatar"><img class="civ-icon" src="{{unit.getIconPath()}}" /></div>
                             <mat-card-title>{{unit.name}} <app-resource-costs [costs]="unit.costs"></app-resource-costs></mat-card-title>
@@ -69,7 +68,7 @@
                                 <div mat-card-avatar><img class="civ-icon" src="/assets/images/techs/UniqueTechCastleAge.webp" /></div>
                                 <mat-card-title>{{civ.castleTech.name}}</mat-card-title>
                                 <mat-card-subtitle class="no-margin-bottom">
-                                    {{civ.castleTech.details}}
+                                    {{civ.castleTech.details}} <app-resource-costs [costs]="civ.castleTech.costs"></app-resource-costs>
                                 </mat-card-subtitle>
                             </mat-card-header>
                         </mat-card>

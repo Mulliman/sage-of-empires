@@ -106,6 +106,8 @@ export interface ITech
 {
     name: string;
     details: string;
+    costs?: IResourceCost[];
+    availableAge?: Age;
 }
 
 export class PlayerColour {

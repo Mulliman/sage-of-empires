@@ -1,4 +1,4 @@
-import { ICiv, IUnit, ITech, CivBase } from './model';
+import { ICiv, IUnit, ITech, CivBase, Food, Gold } from './model';
 import { Longbowman, JaguarWarrior, Cataphract, WoadRaider, ChuKoNu, ThrowingAxeman, Huskarl, Samurai, Mangudai, WarElephant, Mameluke, TeutonicKnight, Janissary, Longboat, Berserk, Tarkan, WarWagon, TurtleShip, PlumedArcher, Conquistador, Missionary, Kamayuk, Slinger, ElephantArcher, ImperialCamelRider, GenoeseCrossbowman, Condottiero, MagyarHuszar, Boyar, CamelArcher, Genitour, ShotelWarrior, Gbeto, OrganGun, Caravel, Arambai, BallistaElephant, KarambitWarrior, RattanArcher, ImperialSkirmisher, Konnik, Kipchak, Leitis, Keshik, FlamingCamel, Coustillier, FlemishMilitia, Serjeant } from './units';
 
 export class Aztecs extends CivBase {
@@ -525,7 +525,7 @@ export class Turks extends CivBase {
 export class Vietnamese extends CivBase {
     armyType = "Archers";
     uniqueUnits = [ new RattanArcher(), new ImperialSkirmisher() ];
-    castleTech = { name: "Chatras", details: "Battle Elephants +50 hit points." };
+    castleTech = { name: "Chatras", details: "Battle Elephants +50 hit points.", costs: [ new Food(800), new Gold(200)] };
     imperialTech = { name: "Paper Money", details: "Tributes 500 gold to each ally." };
     teamBonus = "Imperial Skirmishers are available at the Archery Range.";
     civBonuses = [
