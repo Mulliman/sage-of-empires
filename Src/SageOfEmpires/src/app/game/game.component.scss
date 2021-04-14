@@ -5,7 +5,7 @@
     .container {
         display: flex;
         height: 100%;
-        max-height: 100%;
+        //max-height: 100%;
         background: black;
       }
       
@@ -16,7 +16,7 @@
         height: 100%;
         max-height: 100%;
         background: linear-gradient( #111, #222);
-        background: #222 url('/assets/images/brown2.jpg') repeat;
+        background: #222 url('/assets/images/brown3.jpg') repeat;
         background-position: center;
         background-size: cover;
         padding-left: 20px;

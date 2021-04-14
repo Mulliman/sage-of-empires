@@ -49,7 +49,7 @@ html {
 }
 
 .full-height{
-    height: 100%;
+    min-height: 100%;
 }
 
 /* Text */
@@ -93,8 +93,18 @@ html {
     background: url('/assets/images/paper.png') repeat;
 }
 
-// 
+.mat-tab-group.mat-primary .mat-ink-bar,.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #111;
+}
 
+.mat-tab-label {
+    color:#111 !important;
+    opacity: 0.7 !important;
+
+    &.mat-tab-label-active{
+        opacity: 1 !important;
+    }
+}
 
 /* Spacing */
 
