@@ -1,5 +1,5 @@
 <div class="game-timer">
-    <mat-card class="clock margin">
+    <mat-card class="clock margin ">
         <mat-card-header>
             <mat-card-title><time>{{gameService.elapsedSeconds | gameTime : gameService.gameSpeed}}</time></mat-card-title>
         </mat-card-header>
@@ -10,19 +10,18 @@
 
     </mat-card>
 
-    <div class="margin">
-        <button mat-raised-button color="primary" *ngIf="!gameService.isPlaying" (click)="gameService.start()" class="full-width-button">Start the game already!</button>
+    <div class="margin no-margin-bottom">
+        <button mat-raised-button color="primary" *ngIf="!gameService.isPlaying" (click)="gameService.start()" class="full-width-button start-button">Start the game already!</button>
         
         <div *ngIf="gameService.isPlaying">
             <div class="fifty-fifty">
                 <div>
-                    <button mat-raised-button color="primary"  (click)="gameService.pause()" class="almost-full-width-button">Pause</button>
+                    <button mat-raised-button color="primary"  (click)="gameService.pause()" class="almost-full-width-button pause-button">Pause</button>
                 </div>
                 <div>
-                    <button mat-raised-button color="warn" (click)="gameService.gg()" class="almost-full-width-button">End game</button>
+                    <button mat-raised-button color="warn" (click)="gameService.gg()" class="almost-full-width-button end-button">End game</button>
                </div>
            </div>
         </div>
     </div>
-    
 </div>

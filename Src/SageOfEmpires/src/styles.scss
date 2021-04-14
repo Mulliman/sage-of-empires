@@ -48,6 +48,10 @@ html {
     width: 100%;
 }
 
+.full-height{
+    height: 100%;
+}
+
 /* Text */
 
 .sage-of-empires{
@@ -69,6 +73,14 @@ html {
     list-style-type: none;
 }
 
+.fancy-hr{
+    width: 200px;
+    height: 20px;
+    background: transparent url('/assets/images/hr2.png') no-repeat;
+    background-position: center;
+    border:none;
+    margin: 15px auto;
+}
 
 /* Material additions */
 
@@ -76,6 +88,12 @@ html {
     width: 60px;
     height: 60px;
 }
+
+.mat-card, .mat-expansion-panel, .mat-tab-group {
+    background: url('/assets/images/paper.png') repeat;
+}
+
+// 
 
 
 /* Spacing */
@@ -133,6 +151,15 @@ html {
     margin-bottom: 20px;
 }
 
+.no-margin-top{
+    margin-top: 0 !important;
+}
+
+.no-margin-bottom{
+    margin-bottom: 0 !important;
+}
+
+
 
 
 /* Colours */
@@ -187,51 +214,82 @@ html {
 }
 
 
-.background-blue-ish{
+.background-blue-corner{
     background: #3e59f850;
-    background: linear-gradient(#3e59f880, #3e59f800);
-    color: white;
+    background: linear-gradient(120deg, #3e59f830, #3e59f800);
 }
 
-.background-red-ish{
+.background-red-corner{
     background: #eb000050;
-    background: linear-gradient(#eb000080, #eb000000);
-    color: white;
+    background: linear-gradient(120deg, #eb000040, #eb000000);
 }
 
-.background-green-ish{
+.background-green-corner{
     background: #00fe0080;
-    background: linear-gradient(#00fe0050, #00fe0000);
-    color: black;
+    background: linear-gradient(120deg, #00fe0020, #00fe0000);
 }
 
-.background-yellow-ish{
+.background-yellow-corner{
     background: #ffff0150;
-    background: linear-gradient(#ffff0180, #ffff0100);
-    color: black;
+    background: linear-gradient(120deg, #ffff0130, #ffff0100);
 }
 
-.background-cyan-ish{
+.background-cyan-corner{
     background: #00ffff50;
-    background: linear-gradient(#00ffff80, #00ffff00);
-    color: black;
+    background: linear-gradient(120deg, #00ffff30, #00ffff00);
 }
 
-.background-pink-ish{
+.background-pink-corner{
     background: #ff57b350;
-    background: linear-gradient(#ff57b380, #ff57b300);
-    color: white;
+    background: linear-gradient(120deg,#ff57b350, #ff57b300);
 }
 
-.background-grey-ish{
+.background-grey-corner{
     background: #79797950;
-    background: linear-gradient(#797979FF, #79797900);
-    color: white;
+    background: linear-gradient(120deg,#797979AA, #79797900);
 }
 
-.background-orange-ish{
+.background-orange-corner{
     background: #f9910050;
-    background: linear-gradient(#f9910080, #f9910000);
-    color: black;
+    background: linear-gradient(120deg,#f9910050, #f9910000);
 }
 
+.background-blue-corner-2{
+    background: #3e59f850;
+    background: linear-gradient(-120deg, #3e59f840, #3e59f800);
+}
+
+.background-red-corner-2{
+    background: #eb000050;
+    background: linear-gradient(-120deg, #eb000030, #eb000000);
+}
+
+.background-green-corner-2{
+    background: #00fe0080;
+    background: linear-gradient(-120deg, #00fe0020, #00fe0000);
+}
+
+.background-yellow-corner-2{
+    background: #ffff0150;
+    background: linear-gradient(-120deg, #ffff0130, #ffff0100);
+}
+
+.background-cyan-corner-2{
+    background: #00ffff50;
+    background: linear-gradient(-120deg, #00ffff30, #00ffff00);
+}
+
+.background-pink-corner-2{
+    background: #ff57b350;
+    background: linear-gradient(-120deg,#ff57b350, #ff57b300);
+}
+
+.background-grey-corner-2{
+    background: #79797950;
+    background: linear-gradient(-120deg,#797979AA, #79797900);
+}
+
+.background-orange-corner-2{
+    background: #f9910050;
+    background: linear-gradient(-120deg,#f9910050, #f9910000);
+}

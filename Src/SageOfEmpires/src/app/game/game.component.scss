@@ -15,10 +15,14 @@
         width: 30%; /* A fixed width as the default */
         height: 100%;
         max-height: 100%;
-        background: white;
-        background: linear-gradient(#EEE, #FFF);
-        border-left: 3px solid #ccc;
-        border-right: 3px solid #ccc;
+        background: linear-gradient( #111, #222);
+        background: #222 url('/assets/images/brown2.jpg') repeat;
+        background-position: center;
+        background-size: cover;
+        padding-left: 20px;
+        padding-right: 20px;
+        z-index: 10;
+        box-shadow: 0 0 50px black;
 
         app-timer{
 
@@ -35,7 +39,7 @@
         width: 35%;
         height: 100%;
         max-height: 100%;
-        background: #222;
+        background: #222 url('/assets/images/leather.png') repeat;
         overflow-y: scroll;
       }
 }

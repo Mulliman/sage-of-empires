@@ -1,6 +1,6 @@
-<div class="build-order-panel margin" #divToScroll>
+<div class="build-order-panel margin no-margin-top" #divToScroll>
   <div>
-    <mat-tab-group dynamicHeight [selectedIndex]="selected.value" (selectedIndexChange)="selected.setValue($event)">
+    <mat-tab-group dynamicHeight [selectedIndex]="selected.value" (selectedIndexChange)="selected.setValue($event)" class="build-order-tabs">
       <mat-tab label="Choose build order">
         <div>
           <app-choose-build-order></app-choose-build-order>

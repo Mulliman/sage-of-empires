@@ -1,3 +1,3 @@
-<div *ngIf="gameService.player" class="player padding background-{{gameService.player.getColour().toLowerCase()}}-ish">
+<div *ngIf="gameService.player" class="player padding full-height background-{{gameService.player.getColour().toLowerCase()}}-corner">
     <app-civ-details [civ]="gameService.player.civ" [isPlayer]="true"></app-civ-details>
 </div>

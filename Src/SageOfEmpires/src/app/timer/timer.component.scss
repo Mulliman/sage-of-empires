@@ -1,6 +1,9 @@
 .game-timer{
+    border-bottom: 2px solid linear-gradient(90deg, transparent, #fcc845, transparent);
+
     .clock{
         text-align: center;
+        border: 3px solid #555;
 
         time{
             width: 100%;
@@ -16,7 +19,35 @@
         width: 100%;
     }
 
+    .speed-chooser{
+        ::ng-deep [aria-pressed=true]{
+            background: linear-gradient(10deg, #cf9e21, #fcc845);
+            font-weight: bold;
+        }
+    }
+
     ::ng-deep .mat-button-toggle-label-content {
         line-height: 24px !important;
+    }
+
+    .start-button, .pause-button{
+        color: black;
+        font-weight: bold;
+        background: linear-gradient(10deg, #b18415, #f3bc31);
+        border: 2px solid #644b0b;
+
+        &:hover{
+            background: linear-gradient(10deg, #cf9e21, #fcc845);
+        }
+    }
+
+    .end-button{
+        color: white;
+        background:linear-gradient(10deg, #901818, #f33c2f);
+        border: 2px solid #644b0b;
+
+        &:hover{
+            background:linear-gradient(10deg, #af2121, #fa5347);
+        }
     }
 }

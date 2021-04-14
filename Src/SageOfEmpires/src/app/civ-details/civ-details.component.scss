@@ -12,8 +12,12 @@
     }
 
     .settings{
-        background: #555;
-        color: #999;
+        background: #000;
+        color: #aaa !important;
+
+        .settings-title{
+            color: #aaa;
+        }
     }
 
     ::ng-deep .units-list-expansion-panel .mat-expansion-panel-body{
