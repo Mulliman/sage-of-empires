@@ -1,7 +1,22 @@
 .colour-chooser {
-  border: 3px solid black;  
-}
+  border: none;
 
-.black-border{
-    border-right: 2px solid black; 
+  .toggle{
+    margin: 5px;
+    border-radius: 1000px;
+    border: 2px solid #555 !important;
+  }
+
+  .mat-button-toggle-checked.mat-button-toggle-appearance-standard{
+    color: white;
+  }
+
+  ::ng-deep .mat-button-toggle-button {
+    width: 35px;
+    height: 35px;
+    
+    span{
+      line-height: 35px;
+    }
+  }
 }
