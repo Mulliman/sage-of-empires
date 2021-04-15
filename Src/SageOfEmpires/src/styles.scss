@@ -1,348 +1,365 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
-  .cursor-pointer{
-      cursor: pointer;
-  }
+.cursor-pointer {
+  cursor: pointer;
+}
 
 ::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+
+.visible-above-supported-size,
+.visible-below-supported-size {
+  display: none;
+}
+
+@media only screen and (min-width: 1350px) {
+  .visible-above-supported-size {
+      display: block;
   }
-  /* Optional: show position indicator in red */
-  ::-webkit-scrollbar-thumb {
-    background: #FF0000;
+}
+
+@media only screen and (max-width: 1349px) {
+  .visible-below-supported-size {
+    display: block;
   }
-
-
-.fifty-fifty{
-    display: flex;
-
-    > div{
-        width: 50%;
-    }
 }
 
-.full-width-button{
-    width: 100%;
-    display: block;
+.fifty-fifty {
+  display: flex;
+
+  > div {
+    width: 50%;
+  }
 }
 
-.almost-full-width-button{
-    width: 95%;
-    display: block;
+.full-width-button {
+  width: 100%;
+  display: block;
 }
 
-::ng-deep .full-width-button-in-list{
-    margin-top: 21px;
+.almost-full-width-button {
+  width: 95%;
+  display: block;
 }
 
-.full-width-image{
-    max-width: 100%;
-    width: 100%;
+::ng-deep .full-width-button-in-list {
+  margin-top: 21px;
 }
 
-.full-height{
-    min-height: 100%;
+.full-width-image {
+  max-width: 100%;
+  width: 100%;
+}
+
+.full-height {
+  min-height: 100%;
 }
 
 /* Text */
 
-.sage-of-empires{
-    .serif{
-        font-family: 'Times New Roman', Times, serif;
-    }
+.sage-of-empires {
+  .serif {
+    font-family: "Times New Roman", Times, serif;
+  }
 
-    .gold-text{
-        color: #BD9049;
-    }
+  .gold-text {
+    color: #bd9049;
+  }
 
-    .gold-border{
-        border: 1px solid #BD9049;
-    }
+  .gold-border {
+    border: 1px solid #bd9049;
+  }
 }
 
-.list-no-space{
-    padding: 0;
-    list-style-type: none;
+.list-no-space {
+  padding: 0;
+  list-style-type: none;
 }
 
-.fancy-hr{
-    width: 200px;
-    height: 20px;
-    background: transparent url('/assets/images/hr2.png') no-repeat;
-    background-position: center;
-    border:none;
-    margin: 15px auto;
+.fancy-hr {
+  width: 200px;
+  height: 20px;
+  background: transparent url("/assets/images/hr2.png") no-repeat;
+  background-position: center;
+  border: none;
+  margin: 15px auto;
 }
 
 /* Material additions */
 
-.mat-card-avatar.large-avatar{
-    width: 60px;
-    height: 60px;
+.mat-card-avatar.large-avatar {
+  width: 60px;
+  height: 60px;
 }
 
-.mat-card, .mat-expansion-panel, .mat-tab-group {
-    background: url('/assets/images/paper.png') repeat;
+.mat-card,
+.mat-expansion-panel,
+.mat-tab-group {
+  background: url("/assets/images/paper.png") repeat;
 }
 
-.mat-tab-group.mat-primary .mat-ink-bar,.mat-tab-nav-bar.mat-primary .mat-ink-bar {
-    background-color: #111;
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: #111;
 }
 
 .mat-tab-label {
-    color:#111 !important;
-    opacity: 0.7 !important;
+  color: #111 !important;
+  opacity: 0.7 !important;
 
-    &.mat-tab-label-active{
-        opacity: 1 !important;
-    }
+  &.mat-tab-label-active {
+    opacity: 1 !important;
+  }
 }
 
 /* Spacing */
 
-.padding{
-    padding: 20px;
+.padding {
+  padding: 20px;
 }
 
-.no-padding{
-    padding: 0 !important;
+.no-padding {
+  padding: 0 !important;
 }
 
-.no-padding-top{
-    padding-top: 0 !important;
+.no-padding-top {
+  padding-top: 0 !important;
 }
 
-.no-padding-sides{
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+.no-padding-sides {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-.no-padding-bottom-last{
-    padding-bottom: 0 !important;
+.no-padding-bottom-last {
+  padding-bottom: 0 !important;
 }
 
-.no-padding-bottom-last:last-child{
-    padding-bottom: 0 !important;
+.no-padding-bottom-last:last-child {
+  padding-bottom: 0 !important;
 }
 
-.padding-top{
-    padding-top: 20px;
+.padding-top {
+  padding-top: 20px;
 }
 
-.padding-bottom{
-    padding-bottom: 20px;
+.padding-bottom {
+  padding-bottom: 20px;
 }
 
-.margin{
-    margin: 20px;
+.margin {
+  margin: 20px;
 }
 
-.margin-top{
-    margin-top: 20px;
+.margin-top {
+  margin-top: 20px;
 }
 
-.margin-top-small{
-    margin-top: 10px;
+.margin-top-small {
+  margin-top: 10px;
 }
 
-.margin-top-tiny{
-    margin-top: 5px;
+.margin-top-tiny {
+  margin-top: 5px;
 }
 
-.margin-bottom{
-    margin-bottom: 20px;
+.margin-bottom {
+  margin-bottom: 20px;
 }
 
-.no-margin-top{
-    margin-top: 0 !important;
+.no-margin-top {
+  margin-top: 0 !important;
 }
 
-.no-margin-bottom{
-    margin-bottom: 0 !important;
+.no-margin-bottom {
+  margin-bottom: 0 !important;
 }
-
-
-
 
 /* Colours */
 
-
-.good{
-    color: rgb(31, 114, 31);
+.good {
+  color: rgb(31, 114, 31);
 }
 
-.bad{
-    color: #eb0000;
+.bad {
+  color: #eb0000;
 }
 
-.background-blue{
-    background: #3e59f8;
-    color: white;
+.background-blue {
+  background: #3e59f8;
+  color: white;
 }
 
-.background-red{
-    background: #eb0000;
-    color: white;
+.background-red {
+  background: #eb0000;
+  color: white;
 }
 
-.background-green{
-    background: #00fe00;
-    color: black;
+.background-green {
+  background: #00fe00;
+  color: black;
 }
 
-.background-yellow{
-    background: #ffff01;
-    color: black;
+.background-yellow {
+  background: #ffff01;
+  color: black;
 }
 
-.background-cyan{
-    background: #00ffff;
-    color: black;
+.background-cyan {
+  background: #00ffff;
+  color: black;
 }
 
-.background-pink{
-    background: #ff57b3;
-    color: white;
+.background-pink {
+  background: #ff57b3;
+  color: white;
 }
 
-.background-grey{
-    background: #797979;
-    color: white;
+.background-grey {
+  background: #797979;
+  color: white;
 }
 
-.background-orange{
-    background: #f99100;
-    color: black;
+.background-orange {
+  background: #f99100;
+  color: black;
 }
 
-
-
-
-.background-blue-dark{
-    background: #1b2a83;
-    color: white;
+.background-blue-dark {
+  background: #1b2a83;
+  color: white;
 }
 
-.background-red-dark{
-    background: #751212;
-    color: white;
+.background-red-dark {
+  background: #751212;
+  color: white;
 }
 
-.background-green-dark{
-    background: #297929;
-    color: white;
+.background-green-dark {
+  background: #297929;
+  color: white;
 }
 
-.background-yellow-dark{
-    background: #9e9e30;
-    color: white;
+.background-yellow-dark {
+  background: #9e9e30;
+  color: white;
 }
 
-.background-cyan-dark{
-    background: #206d6d;
-    color: white;
+.background-cyan-dark {
+  background: #206d6d;
+  color: white;
 }
 
-.background-pink-dark{
-    background: #5c173d;
-    color: white;
+.background-pink-dark {
+  background: #5c173d;
+  color: white;
 }
 
-.background-grey-dark{
-    background: #3a3a3a;
-    color: white;
+.background-grey-dark {
+  background: #3a3a3a;
+  color: white;
 }
 
-.background-orange-dark{
-    background: #854f03;
-    color: white;
+.background-orange-dark {
+  background: #854f03;
+  color: white;
 }
 
-
-.background-blue-corner{
-    background: #3e59f850;
-    background: linear-gradient(120deg, #3e59f830, #3e59f800);
+.background-blue-corner {
+  background: #3e59f850;
+  background: linear-gradient(120deg, #3e59f830, #3e59f800);
 }
 
-.background-red-corner{
-    background: #eb000050;
-    background: linear-gradient(120deg, #eb000040, #eb000000);
+.background-red-corner {
+  background: #eb000050;
+  background: linear-gradient(120deg, #eb000040, #eb000000);
 }
 
-.background-green-corner{
-    background: #00fe0080;
-    background: linear-gradient(120deg, #00fe0020, #00fe0000);
+.background-green-corner {
+  background: #00fe0080;
+  background: linear-gradient(120deg, #00fe0020, #00fe0000);
 }
 
-.background-yellow-corner{
-    background: #ffff0150;
-    background: linear-gradient(120deg, #ffff0130, #ffff0100);
+.background-yellow-corner {
+  background: #ffff0150;
+  background: linear-gradient(120deg, #ffff0130, #ffff0100);
 }
 
-.background-cyan-corner{
-    background: #00ffff50;
-    background: linear-gradient(120deg, #00ffff30, #00ffff00);
+.background-cyan-corner {
+  background: #00ffff50;
+  background: linear-gradient(120deg, #00ffff30, #00ffff00);
 }
 
-.background-pink-corner{
-    background: #ff57b350;
-    background: linear-gradient(120deg,#ff57b350, #ff57b300);
+.background-pink-corner {
+  background: #ff57b350;
+  background: linear-gradient(120deg, #ff57b350, #ff57b300);
 }
 
-.background-grey-corner{
-    background: #79797950;
-    background: linear-gradient(120deg,#797979AA, #79797900);
+.background-grey-corner {
+  background: #79797950;
+  background: linear-gradient(120deg, #797979aa, #79797900);
 }
 
-.background-orange-corner{
-    background: #f9910050;
-    background: linear-gradient(120deg,#f9910050, #f9910000);
+.background-orange-corner {
+  background: #f9910050;
+  background: linear-gradient(120deg, #f9910050, #f9910000);
 }
 
-.background-blue-corner-2{
-    background: #3e59f850;
-    background: linear-gradient(-120deg, #3e59f840, #3e59f800);
+.background-blue-corner-2 {
+  background: #3e59f850;
+  background: linear-gradient(-120deg, #3e59f840, #3e59f800);
 }
 
-.background-red-corner-2{
-    background: #eb000050;
-    background: linear-gradient(-120deg, #eb000030, #eb000000);
+.background-red-corner-2 {
+  background: #eb000050;
+  background: linear-gradient(-120deg, #eb000030, #eb000000);
 }
 
-.background-green-corner-2{
-    background: #00fe0080;
-    background: linear-gradient(-120deg, #00fe0020, #00fe0000);
+.background-green-corner-2 {
+  background: #00fe0080;
+  background: linear-gradient(-120deg, #00fe0020, #00fe0000);
 }
 
-.background-yellow-corner-2{
-    background: #ffff0150;
-    background: linear-gradient(-120deg, #ffff0130, #ffff0100);
+.background-yellow-corner-2 {
+  background: #ffff0150;
+  background: linear-gradient(-120deg, #ffff0130, #ffff0100);
 }
 
-.background-cyan-corner-2{
-    background: #00ffff50;
-    background: linear-gradient(-120deg, #00ffff30, #00ffff00);
+.background-cyan-corner-2 {
+  background: #00ffff50;
+  background: linear-gradient(-120deg, #00ffff30, #00ffff00);
 }
 
-.background-pink-corner-2{
-    background: #ff57b350;
-    background: linear-gradient(-120deg,#ff57b350, #ff57b300);
+.background-pink-corner-2 {
+  background: #ff57b350;
+  background: linear-gradient(-120deg, #ff57b350, #ff57b300);
 }
 
-.background-grey-corner-2{
-    background: #79797950;
-    background: linear-gradient(-120deg,#797979AA, #79797900);
+.background-grey-corner-2 {
+  background: #79797950;
+  background: linear-gradient(-120deg, #797979aa, #79797900);
 }
 
-.background-orange-corner-2{
-    background: #f9910050;
-    background: linear-gradient(-120deg,#f9910050, #f9910000);
+.background-orange-corner-2 {
+  background: #f9910050;
+  background: linear-gradient(-120deg, #f9910050, #f9910000);
 }

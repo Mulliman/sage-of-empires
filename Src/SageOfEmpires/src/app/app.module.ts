@@ -32,6 +32,7 @@ import { TimerComponent } from './timer/timer.component';
 import { BuildOrderTargetDirective } from './directives/build-order-target.directive';
 import { HomeComponent } from './home/home.component';
 import { ResourceCostsComponent } from './resource-costs/resource-costs.component';
+import { ScreenSizeWarningComponent } from './screen-size-warning/screen-size-warning.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ResourceCostsComponent } from './resource-costs/resource-costs.componen
     TimerComponent,
     BuildOrderTargetDirective,
     HomeComponent,
-    ResourceCostsComponent
+    ResourceCostsComponent,
+    ScreenSizeWarningComponent
   ],
   imports: [
     CommonModule,

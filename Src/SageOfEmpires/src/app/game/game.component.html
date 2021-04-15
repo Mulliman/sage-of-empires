@@ -1,4 +1,4 @@
-  <div class="game">
+  <div class="game visible-above-supported-size">
     <div class="container">
         <div class="player">
             <app-add-player *ngIf="!gameService.player"></app-add-player>
@@ -18,4 +18,8 @@
             <app-opponent></app-opponent>
         </div>
     </div>
+  </div>
+
+  <div class="visible-below-supported-size">
+    <app-screen-size-warning></app-screen-size-warning>
   </div>
