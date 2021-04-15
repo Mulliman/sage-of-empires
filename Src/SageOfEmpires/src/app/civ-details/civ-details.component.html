@@ -67,7 +67,7 @@
                             <mat-card-header>
                                 <div mat-card-avatar><img class="civ-icon" src="/assets/images/techs/UniqueTechCastleAge.webp" /></div>
                                 <mat-card-title>{{civ.castleTech.name}}</mat-card-title>
-                                <mat-card-subtitle class="no-margin-bottom">
+                                <mat-card-subtitle class="no-margin-bottom tech-costs">
                                     {{civ.castleTech.details}} <app-resource-costs [costs]="civ.castleTech.costs"></app-resource-costs>
                                 </mat-card-subtitle>
                             </mat-card-header>
@@ -78,7 +78,7 @@
                             <mat-card-header>
                                 <div mat-card-avatar><img class="civ-icon" src="/assets/images/techs/UniqueTechImperialAge.webp" /></div>
                                 <mat-card-title>{{civ.imperialTech.name}}</mat-card-title>
-                                <mat-card-subtitle class="no-margin-bottom">
+                                <mat-card-subtitle class="no-margin-bottom tech-costs">
                                     {{civ.imperialTech.details}} <app-resource-costs [costs]="civ.imperialTech.costs"></app-resource-costs>
                                 </mat-card-subtitle>
                             </mat-card-header>

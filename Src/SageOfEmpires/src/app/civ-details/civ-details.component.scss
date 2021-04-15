@@ -20,6 +20,16 @@
         }
     }
 
+    ::ng-deep .tech-costs{
+        .costs{
+            display: block;
+
+            .resource{
+                font-weight: bold;
+            }
+        }
+    }
+
     ::ng-deep .units-list-expansion-panel .mat-expansion-panel-body{
         padding-bottom: 0;
     }
