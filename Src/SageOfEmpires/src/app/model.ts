@@ -179,6 +179,8 @@ export interface IBuildOrder
 {
     readonly name: string;
     readonly steps: BuildOrderStep[];
+    readonly finalTips?: string;
+    readonly hideOnYourOwn?: boolean;
     readonly recommendedCivs?: ICiv[];
 }
 
@@ -189,6 +191,7 @@ export class BuildOrderStep
     details?: string;
     footnotes?: string[];
     imageUrl?: string;
+    isAgeUp?: boolean;
 }
 
 export class GameSpeed {

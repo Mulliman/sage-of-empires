@@ -12,7 +12,7 @@
             <h3 class="selected-build-order padding">{{buildOrderService.selectedBuildOrder.name}}</h3>
 
             <ul class="build-order-steps">
-              <li class="build-order-step" [appBuildOrderTarget] [idealTime]="step.idealTimeInSeconds"
+              <li class="build-order-step" [ngClass]="{'build-order-step': true, 'is-age-up': step.isAgeUp}" [appBuildOrderTarget] [idealTime]="step.idealTimeInSeconds"
                 attr.data-scroll-to-seconds="{{step.idealTimeInSeconds}}"
                 *ngFor="let step of buildOrderService.selectedBuildOrder.steps">
                 <div class="villager-count">{{step.villagerCount}}</div>
@@ -24,6 +24,13 @@
                 </div>
               </li>
             </ul>
+
+            <div class="final-tips" *ngIf="buildOrderService.selectedBuildOrder.finalTips">
+              <h4>Final tips</h4>
+              <p>{{buildOrderService.selectedBuildOrder.finalTips}}</p>
+              <p *ngIf="!buildOrderService.selectedBuildOrder.hideOnYourOwn">But now...</p>
+              <p *ngIf="!buildOrderService.selectedBuildOrder.hideOnYourOwn"><strong>YOU'RE ON YOUR OWN!</strong></p>
+            </div>
           </div>
         </div>
       </mat-tab>
