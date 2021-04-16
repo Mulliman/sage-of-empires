@@ -1,19 +1,20 @@
-
-<div *ngIf="gameService.player" class="margin build-order-card suggested">
-    <mat-card class="mat-elevation-z0">
-        <mat-card-header>
-            <mat-card-title>Suggested build orders</mat-card-title>
-        </mat-card-header>
-
-        <div class="margin-top-tiny" *ngFor="let buildOrder of buildOrderService.buildOrders | isRecommended">
-            <button mat-flat-button 
-                class="full-width-button"
-                (click)="selectBuildOrder(buildOrder)">{{buildOrder.name}}</button>
-        </div>
-        
-    </mat-card>
+<div *ngIf="(buildOrderService.buildOrders | isRecommended) as results">
+    <div *ngIf="gameService.player && results.length > 0" class="margin build-order-card suggested">
+        <mat-card class="mat-elevation-z0">
+            <mat-card-header>
+                <mat-card-title>Suggested build orders</mat-card-title>
+            </mat-card-header>
+    
+            <div class="margin-top-tiny" *ngFor="let buildOrder of buildOrderService.buildOrders | isRecommended">
+                <button mat-flat-button 
+                    class="full-width-button"
+                    (click)="selectBuildOrder(buildOrder)">{{buildOrder.name}}</button>
+            </div>
+            
+        </mat-card>
+    </div>
 </div>
-
+    
 <div class="margin build-order-card">
     <mat-card class="mat-elevation-z0">
         <mat-card-header>

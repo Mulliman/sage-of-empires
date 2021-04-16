@@ -3,7 +3,8 @@ import { GameService } from '../services/game.service';
 import { IBuildOrder } from '../model';
 
 @Pipe({
-  name: 'isRecommended'
+  name: 'isRecommended',
+  pure: false
 })
 export class IsRecommendedPipe implements PipeTransform {
 
