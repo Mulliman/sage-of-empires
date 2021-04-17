@@ -11,6 +11,7 @@ Features:
 - Auto scrolling build order panel that shows bronze/silver/gold rating based on time elapsed
 - Hotkeys (activated by double space or double click) for common tasks
 
+Use the app at https://sage-of-empires.web.app/
 
 Contribute your own build orders
 --------------------------------
