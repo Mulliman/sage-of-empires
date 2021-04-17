@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ICiv } from '../model';
-import { importExpr } from '@angular/compiler/src/output/output_ast';
-import { Aztecs, Britons, Byzantines, Celts, Chinese, Franks, Goths, Japanese, Mongols, Persians, Saracens, Teutons, Turks, Vikings, Huns, Koreans, Mayans, Spanish, Incas, Indians, Italians, Magyars, Slavs, Berbers, Ethiopians, Malians, Portuguese, Burmese, Khmer, Malay, Vietnamese, Bulgarians, Cumans, Lithuanians, Tatars, Burgundians, Sicilians } from '../civs';
+import { Aztecs, Britons, Byzantines, Celts, Chinese, Franks, Goths, Japanese, Mongols, Persians, Saracens, Teutons, Turks, Vikings, Huns, Koreans, Mayans, Spanish, Incas, Indians, Italians, Magyars, Slavs, Berbers, Ethiopians, Malians, Portuguese, Burmese, Khmer, Malay, Vietnamese, Bulgarians, Cumans, Lithuanians, Tatars, Burgundians, Sicilians } from '../_data/civs';
 
 @Injectable({
   providedIn: 'root'

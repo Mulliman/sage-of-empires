@@ -1,4 +1,4 @@
-import { IUnit, UnitBase, Food, Gold, Wood } from './model';
+import { IUnit, UnitBase, Food, Gold, Wood } from '../model';
 
 export class JaguarWarrior extends UnitBase{
     strengths: string = "Good vs other infantry.";

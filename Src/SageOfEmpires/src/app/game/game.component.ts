@@ -1,14 +1,12 @@
 import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
-import { Player, Opponent, PlayerColours, TeamColourOptions, PlayerColourConstants } from '../model';
-import { MatGridList, MatGridTile } from '@angular/material/grid-list';
+import { Player, Opponent, PlayerColourConstants } from '../model';
 import { GameService } from '../services/game.service';
 import { BuildOrderService } from '../services/build-order.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
 import { CivService } from '../services/civ.service';
-import { Aztecs, Berbers, Britons, Bulgarians, Burgundians, Burmese, Byzantines, Celts, Chinese, Cumans, Ethiopians, Franks, Goths, Huns, Incas, Indians, Italians, Japanese, Khmer, Lithuanians, Koreans, Magyars, Malay, Malians, Mayans, Mongols, Persians, Portuguese, Saracens, Sicilians, Slavs, Spanish, Tatars, Teutons, Turks, Vietnamese, Vikings } from '../civs';
+import { Aztecs, Berbers, Britons, Bulgarians, Burgundians, Burmese, Byzantines, Celts, Chinese, Cumans, Ethiopians, Franks, Goths, Huns, Incas, Indians, Italians, Japanese, Khmer, Lithuanians, Koreans, Magyars, Malay, Malians, Mayans, Mongols, Persians, Portuguese, Saracens, Sicilians, Slavs, Spanish, Tatars, Teutons, Turks, Vietnamese, Vikings } from '../_data/civs';
 
 @Component({
   selector: 'app-game',
@@ -22,9 +20,6 @@ export class GameComponent implements OnInit {
   timesCtrlClicked = 0;
   dialogRef: MatDialogRef<CliDialog, any>;
 
-  // player: Player;
-  // opponent: Opponent;
-
   constructor(public gameService: GameService,
     private buildOrderService: BuildOrderService,
     private elementRef: ElementRef,
@@ -36,22 +31,15 @@ export class GameComponent implements OnInit {
   ngOnInit(): void {
 
     this.buildOrderService.onStepSetAsDone.subscribe((value) => {
-      console.log("onStepSetAsDone", value);
-
-
       var el = this.divToScroll.nativeElement.querySelector('[data-scroll-to-seconds="' + value + '"]');
-
-      console.log("onStepSetAsDone - el", el);
 
       if (el) {
         var top = el.offsetTop;
-        console.log("onStepSetAsDone - el.offsetTop", top);
         this.divToScroll.nativeElement.scrollTop = top;
       }
     });
 
     let global = this.renderer.listen('document', 'dblclick', (evt) => {
-      console.log('Clicking the document', evt);
       this.openCli();
     })
 

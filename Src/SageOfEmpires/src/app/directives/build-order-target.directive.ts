@@ -28,8 +28,8 @@ export class BuildOrderTargetDirective {
     var interval = setInterval(() => {
       var awardClass = "";
 
-      var silver = idealTime * 1.1;
-      var bronze = idealTime * 1.2;
+      var silver = idealTime * 1.05;
+      var bronze = idealTime * 1.15;
       var bad = idealTime * 1.3;
 
       var elapsedSeconds = this.gameService.elapsedSeconds * this.gameService.gameSpeed;

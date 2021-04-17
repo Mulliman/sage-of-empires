@@ -18,12 +18,5 @@ export class BuildOrderPanelComponent implements OnInit {
 
   ngOnInit(): void {
     this.buildOrderService.onBuildOrderSelected.subscribe(() => { this.selected.setValue(1); });
-
-//     setInterval(() => {
-// console.log(this.divToScroll.nativeElement.scrollTop);
-
-
-//       this.divToScroll.nativeElement.scrollTop += 5;
-//     }, 2500);
   }
 }

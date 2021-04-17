@@ -1,4 +1,4 @@
-import { ICiv, IUnit, ITech, CivBase, Food, Gold, Wood, Stone } from './model';
+import { ICiv, IUnit, ITech, CivBase, Food, Gold, Wood, Stone } from '../model';
 import { Longbowman, JaguarWarrior, Cataphract, WoadRaider, ChuKoNu, ThrowingAxeman, Huskarl, Samurai, Mangudai, WarElephant, Mameluke, TeutonicKnight, Janissary, Longboat, Berserk, Tarkan, WarWagon, TurtleShip, PlumedArcher, Conquistador, Missionary, Kamayuk, Slinger, ElephantArcher, ImperialCamelRider, GenoeseCrossbowman, Condottiero, MagyarHuszar, Boyar, CamelArcher, Genitour, ShotelWarrior, Gbeto, OrganGun, Caravel, Arambai, BallistaElephant, KarambitWarrior, RattanArcher, ImperialSkirmisher, Konnik, Kipchak, Leitis, Keshik, FlamingCamel, Coustillier, FlemishMilitia, Serjeant } from './units';
 
 export class Aztecs extends CivBase {

@@ -164,10 +164,6 @@ export class Player
         }
 
         return this.playerColour.colour;
-
-        // var name = PlayerColours[this.number];
-
-        // return name;
     }
 }
 
@@ -191,7 +187,7 @@ export class BuildOrderStep
     details?: string;
     footnotes?: string[];
     imageUrl?: string;
-    isAgeUp?: boolean;
+    ageUpValue?: string;
 }
 
 export class GameSpeed {
