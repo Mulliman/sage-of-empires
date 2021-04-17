@@ -22,7 +22,7 @@ Implement the interface 'IBuildOrder'
 
 Add build order steps for each new villager created, filling in the following properties:
 
-- villagerCount - The number villager just cretaed.
+- villagerCount - The number villager just created.
 - idealTimeInSeconds - the in game time that the step should ideally be finished in. 
 - details - The main message for each step.
 - footnotes - Use to add extra details into the steps, for instance researching techs or extra actions.
