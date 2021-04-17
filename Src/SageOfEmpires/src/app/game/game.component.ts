@@ -78,7 +78,19 @@ export class GameComponent implements OnInit {
 
 @Component({
   selector: 'cli-dialog',
-  template: "<h1>Press hotkeys</h1><p>E.g. <ul class='list-no-space'><li><strong>14</strong> starts the game</li><li><strong>gg</strong> ends the game</li></ul>"
+  template: `<h1 style='text-align:center'>Press hotkeys</h1><p>E.g. <ul class='list-no-space'>
+    <li><strong>14</strong> starts the game</li>
+    <li><strong>gg</strong> ends the game</li>
+    <li>&nbsp;</li>
+    <li><strong>11</strong> sets player colour to colour 1 (blue)</li>
+    <li><strong>22</strong> sets player colour to colour 2 (red) etc..</li>
+    <li><strong>q1</strong> sets opponent colour to colour 1 (blue)</li>
+    <li><strong>q2</strong> sets opponent colour to colour 2 (red) etc..</li>
+    <li>&nbsp;</li>
+    <li><strong>az</strong> first unique series of letters selects civ for player</li>
+    <li><strong>Az</strong> starting with capital letter selects civ for opponent</li>
+    <li>E.g. <strong>az/Az</strong> Aztecs, <strong>be/Be</strong> Berbers, <strong>bul/Bul</strong> Bulgarians, <strong>burg/Burg</strong> Burgundians</li>
+    </ul>`
 })
 export class CliDialog {
 
