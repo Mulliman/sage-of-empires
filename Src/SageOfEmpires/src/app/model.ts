@@ -188,6 +188,7 @@ export class BuildOrderStep
     footnotes?: string[];
     imageUrl?: string;
     ageUpValue?: string;
+    resources?: IResourceCost[];
 }
 
 export class GameSpeed {

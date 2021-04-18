@@ -38,6 +38,10 @@
         padding-bottom: 10px;
         border-bottom: 2px solid #ccc;
 
+        .step-details{
+            width: 100%;
+        }
+
         .villager-count{
             display: flex;
             min-width: 40px;
@@ -60,6 +64,37 @@
 
         .details{
             font-weight: bold;
+            display: flex;
+            width: 100%;
+
+            .left{
+            }
+
+            .right{
+                margin-left: auto;
+            }
+
+            &.help{
+                font-weight: normal;
+                margin-bottom: 0;
+
+                .left{
+                    span{
+                        width: 40px;
+                        text-align: center;
+                        margin-right: 10px;
+                        display: inline-block;
+                    }
+                }
+
+                .right{
+                    span{
+                        width: 30px;
+                        text-align: center;
+                        display: inline-block;
+                    }
+                }
+            }
         }
 
         &.is-age-up .details{
@@ -80,8 +115,9 @@
 
         &.done,
         &.is-age-up.done,
-        &.is-age-up.done .details{
-            color: #AAA;
+        &.is-age-up.done .details,
+        &.done .details ::ng-deep .resource {
+            color: #AAA !important;
         }
 
         &.done .villager-count{

@@ -9,16 +9,29 @@
       <mat-tab label="Plan">
         <div>
           <div *ngIf="buildOrderService.selectedBuildOrder">
-            <h3 class="selected-build-order padding">{{buildOrderService.selectedBuildOrder.name}}</h3>
+            <h3 class="selected-build-order padding no-margin-bottom">{{buildOrderService.selectedBuildOrder.name}}</h3>
 
-            <ul class="build-order-steps">
+            <ul class="build-order-steps no-margin-top">
+              <li class="build-order-step done">
+                <div class="step-details">
+                  <p class="details help">
+                    <span class="left"><span>&darr;</span>Villager number</span>
+                    <span class="right">Villager activities<span>&darr;</span></span>
+                  </p>
+                </div>
+              </li>
               <li class="build-order-step" [ngClass]="{'build-order-step': true, 'is-age-up': !!step.ageUpValue}" [appBuildOrderTarget] [idealTime]="step.idealTimeInSeconds"
                 attr.data-scroll-to-seconds="{{step.idealTimeInSeconds}}"
                 *ngFor="let step of buildOrderService.selectedBuildOrder.steps">
-                <div class="villager-count" *ngIf="!step.ageUpValue">{{step.villagerCount}}</div>
+                <div class="villager-count" *ngIf="!step.ageUpValue">
+                  {{step.villagerCount}}
+                </div>
                 <div class="villager-count" *ngIf="!!step.ageUpValue">{{step.ageUpValue}}</div>
                 <div class="step-details">
-                  <p class="details">{{step.details}}</p>
+                  <p class="details">
+                    <span class="left">{{step.details}}</span>
+                    <span class="right"><app-resource-costs [costs]="step.resources"></app-resource-costs></span>
+                  </p>
                   <div *ngIf="step.footnotes">
                     <p class="footnote" *ngFor="let footnote of step.footnotes">&rarr; {{footnote}}</p>
                   </div>

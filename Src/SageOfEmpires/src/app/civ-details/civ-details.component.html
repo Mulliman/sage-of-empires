@@ -42,8 +42,8 @@
                             <div mat-card-avatar class="large-avatar"><img class="civ-icon" src="{{unit.getIconPath()}}" /></div>
                             <mat-card-title>{{unit.name}} <app-resource-costs [costs]="unit.costs"></app-resource-costs></mat-card-title>
                             <mat-card-subtitle class="no-margin-bottom">
-                                <small class="unit-strength good">{{unit.strengths}}</small><br />
-                                <small class="unit-weakness bad">{{unit.weaknesses}}</small>
+                                <span class="unit-strength good">{{unit.strengths}}</span><br />
+                                <span class="unit-weakness bad">{{unit.weaknesses}}</span>
                             </mat-card-subtitle>
                         </mat-card-header>
                     </mat-card>

@@ -1,4 +1,8 @@
 .civ-details{
+    small{
+        font-size: 13px;
+    }
+
     .civ-icon{
         max-width: 100%;
     }
@@ -21,6 +25,8 @@
     }
 
     ::ng-deep .tech-costs{
+        color: #111;;
+
         .costs{
             display: block;
 
@@ -28,6 +34,10 @@
                 font-weight: bold;
             }
         }
+    }
+
+    ::ng-deep .mat-card, ::ng-deep .mat-expansion-panel-header-title{
+        color: #000;
     }
 
     ::ng-deep .units-list-expansion-panel .mat-expansion-panel-body{
@@ -43,6 +53,10 @@
             margin-top:0;
             padding-left:20px;
             padding-right: 10px;
+
+            li{
+                margin-bottom: 7px;
+            }
         }
     }
 }
