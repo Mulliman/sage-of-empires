@@ -1,0 +1,751 @@
+{
+
+   "author":"Hera",
+
+   "publisher":"publisher_id",
+
+   "build":[
+
+      {
+
+         "resources":{
+
+            "gold":0,
+
+            "food":6,
+
+            "stone":0,
+
+            "build":0,
+
+            "wood":0
+
+         },
+
+         "buildings":[
+
+            {
+
+               "type":"house",
+
+               "count":2
+
+            }
+
+         ],
+
+         "type":"newVillagers",
+
+         "count":6,
+
+         "task":"sheep"
+
+      },
+
+      {
+
+         "count":4,
+
+         "type":"newVillagers",
+
+         "resources":{
+
+            "wood":4,
+
+            "build":0,
+
+            "stone":0,
+
+            "gold":0,
+
+            "food":6
+
+         },
+
+         "task":"wood"
+
+      },
+
+      {
+
+         "resources":{
+
+            "stone":0,
+
+            "build":0,
+
+            "wood":4,
+
+            "food":7,
+
+            "gold":0
+
+         },
+
+         "type":"newVillagers",
+
+         "count":1,
+
+         "task":"boar"
+
+      },
+
+      {
+
+         "resources":{
+
+            "wood":4,
+
+            "stone":0,
+
+            "build":0,
+
+            "food":10,
+
+            "gold":0
+
+         },
+
+         "count":3,
+
+         "task":"berries",
+
+         "type":"newVillagers",
+
+         "buildings":[
+
+            {
+
+               "count":2,
+
+               "type":"house"
+
+            },
+
+            {
+
+               "type":"mill",
+
+               "count":1
+
+            }
+
+         ]
+
+      },
+
+      {
+
+         "type":"newVillagers",
+
+         "task":"boar",
+
+         "count":1,
+
+         "resources":{
+
+            "wood":4,
+
+            "stone":0,
+
+            "gold":0,
+
+            "build":0,
+
+            "food":11
+
+         }
+
+      },
+
+      {
+
+         "resources":{
+
+            "gold":0,
+
+            "food":12,
+
+            "wood":4,
+
+            "stone":0,
+
+            "build":0
+
+         },
+
+         "task":"berries",
+
+         "type":"newVillagers",
+
+         "count":1
+
+      },
+
+      {
+
+         "task":"sheep",
+
+         "count":2,
+
+         "type":"newVillagers",
+
+         "resources":{
+
+            "build":0,
+
+            "stone":0,
+
+            "wood":4,
+
+            "food":14,
+
+            "gold":0
+
+         }
+
+      },
+
+      {
+
+         "task":"wood",
+
+         "count":3,
+
+         "resources":{
+
+            "build":0,
+
+            "gold":0,
+
+            "food":14,
+
+            "wood":7,
+
+            "stone":0
+
+         },
+
+         "type":"newVillagers"
+
+      },
+
+      {
+
+         "type":"research",
+
+         "resources":{
+
+            "food":14,
+
+            "build":0,
+
+            "stone":0,
+
+            "wood":7,
+
+            "gold":0
+
+         },
+
+         "tech":[
+
+            "loom"
+
+         ]
+
+      },
+
+      {
+
+         "type":"ageUp",
+
+         "age":"feudalAge",
+
+         "resources":{
+
+            "build":0,
+
+            "gold":0,
+
+            "stone":0,
+
+            "food":14,
+
+            "wood":7
+
+         }
+
+      },
+
+      {
+
+         "type":"moveVillagers",
+
+         "count":3,
+
+         "to":"wood",
+
+         "resources":{
+
+            "gold":0,
+
+            "wood":10,
+
+            "food":11,
+
+            "build":0,
+
+            "stone":0
+
+         },
+
+         "from":"sheep"
+
+      },
+
+      {
+
+         "type":"moveVillagers",
+
+         "count":3,
+
+         "to":"gold",
+
+         "from":"sheep",
+
+         "resources":{
+
+            "food":8,
+
+            "stone":0,
+
+            "wood":10,
+
+            "gold":3,
+
+            "build":0
+
+         }
+
+      },
+
+      {
+
+         "type":"build",
+
+         "buildings":[
+
+            {
+
+               "count":1,
+
+               "type":"barracks"
+
+            }
+
+         ],
+
+         "resources":{
+
+            "food":8,
+
+            "build":0,
+
+            "gold":3,
+
+            "wood":10,
+
+            "stone":0
+
+         }
+
+      },
+
+      {
+
+         "resources":{
+
+            "wood":10,
+
+            "gold":3,
+
+            "build":0,
+
+            "food":8,
+
+            "stone":0
+
+         },
+
+         "type":"newAge",
+
+         "age":"feudalAge"
+
+      },
+
+      {
+
+         "tech":[
+
+            "doubleBitAxe"
+
+         ],
+
+         "resources":{
+
+            "food":8,
+
+            "build":0,
+
+            "gold":3,
+
+            "wood":10,
+
+            "stone":0
+
+         },
+
+         "type":"research"
+
+      },
+
+      {
+
+         "count":4,
+
+         "type":"newVillagers",
+
+         "resources":{
+
+            "wood":10,
+
+            "food":8,
+
+            "stone":0,
+
+            "gold":7,
+
+            "build":0
+
+         },
+
+         "buildings":[
+
+            {
+
+               "count":2,
+
+               "type":"archeryRange"
+
+            }
+
+         ],
+
+         "task":"gold"
+
+      },
+
+      {
+
+         "type":"trainUnit",
+
+         "unit":"archer",
+
+         "count":"∞",
+
+         "resources":{
+
+            "food":8,
+
+            "stone":0,
+
+            "wood":10,
+
+            "gold":7,
+
+            "build":0
+
+         }
+
+      },
+
+      {
+
+         "buildings":[
+
+            {
+
+               "count":1,
+
+               "type":"blacksmith"
+
+            }
+
+         ],
+
+         "type":"build",
+
+         "resources":{
+
+            "gold":7,
+
+            "food":8,
+
+            "wood":10,
+
+            "build":0,
+
+            "stone":0
+
+         }
+
+      },
+
+      {
+
+         "resources":{
+
+            "gold":7,
+
+            "build":0,
+
+            "food":8,
+
+            "stone":0,
+
+            "wood":10
+
+         },
+
+         "type":"research",
+
+         "tech":[
+
+            "fletching"
+
+         ]
+
+      },
+
+      {
+
+         "count":10,
+
+         "type":"newVillagers",
+
+         "task":"farm",
+
+         "resources":{
+
+            "wood":10,
+
+            "food":18,
+
+            "gold":7,
+
+            "build":0,
+
+            "stone":0
+
+         }
+
+      },
+
+      {
+
+         "task":"gold",
+
+         "resources":{
+
+            "food":18,
+
+            "wood":10,
+
+            "build":0,
+
+            "gold":8,
+
+            "stone":0
+
+         },
+
+         "type":"newVillagers",
+
+         "count":1
+
+      },
+
+      {
+
+         "type":"research",
+
+         "tech":[
+
+            "wheelbarrow"
+
+         ],
+
+         "resources":{
+
+            "gold":8,
+
+            "wood":10,
+
+            "stone":0,
+
+            "food":18,
+
+            "build":0
+
+         }
+
+      },
+
+      {
+
+         "age":"castleAge",
+
+         "type":"ageUp",
+
+         "resources":{
+
+            "gold":8,
+
+            "build":0,
+
+            "food":18,
+
+            "stone":0,
+
+            "wood":10
+
+         }
+
+      },
+
+      {
+
+         "type":"research",
+
+         "tech":[
+
+            "horseCollar",
+
+            "paddedArcherArmor",
+
+            "goldMining"
+
+         ],
+
+         "resources":{
+
+            "stone":0,
+
+            "gold":8,
+
+            "build":0,
+
+            "wood":10,
+
+            "food":18
+
+         }
+
+      },
+
+      {
+
+         "resources":{
+
+            "stone":0,
+
+            "gold":8,
+
+            "wood":10,
+
+            "build":0,
+
+            "food":18
+
+         },
+
+         "type":"newAge",
+
+         "age":"castleAge"
+
+      },
+
+      {
+
+         "type":"research",
+
+         "tech":[
+
+            "crossbowman",
+
+            "bodkinArrow",
+
+            "bowSaw"
+
+         ],
+
+         "resources":{
+
+            "build":0,
+
+            "gold":8,
+
+            "food":18,
+
+            "stone":0,
+
+            "wood":10
+
+         }
+
+      }
+
+   ],
+
+   "pop":{
+
+      "castleAge":15,
+
+      "feudalAge":22
+
+   },
+
+   "id":4,
+
+   "image":"Archer",
+
+   "reference":"https://www.reddit.com/r/aoe2/comments/juuw7y/hera_build_order_straight_archers_with_new/",
+
+   "civilization":"Generic",
+
+   "imageURL":"https://firebasestorage.googleapis.com/v0/b/build-order-guide.appspot.com/o/Images%2FArcher.png?alt=media&token=049d898a-7322-4520-8597-da91446238e7",
+
+   "description":"Going for archers in Feudal Age is one of the easiest builds, yet it’s very powerful. This build gets you to two ranges working faster than Cicero's Archers build with only 22 pop before clicking up to Feudal but delays Horse Collar in return. When reaching the Castle Age you can go for 2 TCs or a university and fast ballistics.",
+
+   "status":"published",
+
+   "title":"Archers",
+
+   "uptime":{
+
+      "feudalAge":"10:05",
+
+      "castleAge":"19:00"
+
+   },
+
+   "difficulty":1,
+
+   "attributes":[
+
+      "fastFeudal"
+
+   ]
+
+}

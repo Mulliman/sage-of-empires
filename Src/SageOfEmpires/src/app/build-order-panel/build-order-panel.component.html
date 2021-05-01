@@ -24,7 +24,7 @@
                 attr.data-scroll-to-seconds="{{step.idealTimeInSeconds}}"
                 *ngFor="let step of buildOrderService.selectedBuildOrder.steps">
                 <div class="villager-count" *ngIf="!step.ageUpValue">
-                  {{step.villagerCount}}
+                  {{(step.villagerCount == "1" ? 3 : step.villagerCount)}}
                 </div>
                 <div class="villager-count" *ngIf="!!step.ageUpValue">{{step.ageUpValue}}</div>
                 <div class="step-details">

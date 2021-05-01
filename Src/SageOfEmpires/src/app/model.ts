@@ -1,7 +1,6 @@
 type Nullable<T> = T | null;
 
-export interface ICiv
-{
+export interface ICiv {
     readonly name: string;
 
     readonly armyType: string;
@@ -17,21 +16,19 @@ export interface ICiv
     getIconPath();
 }
 
-export abstract class CivBase implements ICiv
-{
-   abstract name: string;    
-   abstract armyType: string;
-   abstract uniqueUnits: IUnit[];
-   abstract castleTech: ITech;
-   abstract imperialTech: ITech;
-   abstract teamBonus: string;
-   abstract civBonuses: string[];
+export abstract class CivBase implements ICiv {
+    abstract name: string;
+    abstract armyType: string;
+    abstract uniqueUnits: IUnit[];
+    abstract castleTech: ITech;
+    abstract imperialTech: ITech;
+    abstract teamBonus: string;
+    abstract civBonuses: string[];
 
-   getIconPath () { return "/assets/images/civs/civicon-" + this.name.toLowerCase() + ".webp" };
-} 
+    getIconPath() { return "/assets/images/civs/civicon-" + this.name.toLowerCase() + ".webp" };
+}
 
-export interface IUnit
-{
+export interface IUnit {
     name: string;
     strengths: string;
     weaknesses: string;
@@ -41,14 +38,14 @@ export interface IUnit
     getIconPath();
 }
 
-export abstract class UnitBase implements IUnit{
+export abstract class UnitBase implements IUnit {
     abstract name: string;
     abstract strengths: string;
     abstract weaknesses: string;
     costs?: IResourceCost[];
     availableAge?: Age;
 
-    getIconPath () { return "/assets/images/units/" + this.name.replace(/ /g,"").toLowerCase() + "icon-de.webp" };
+    getIconPath() { return "/assets/images/units/" + this.name.replace(/ /g, "").toLowerCase() + "icon-de.webp" };
 }
 
 export enum Age {
@@ -70,40 +67,39 @@ export interface IResourceCost {
     cost: number;
 }
 
-export class Wood implements IResourceCost{
+export class Wood implements IResourceCost {
     resource: Resource;
 
-    constructor(public cost: number){
+    constructor(public cost: number) {
         this.resource = Resource.Wood;
     }
 }
 
-export class Food implements IResourceCost{
+export class Food implements IResourceCost {
     resource: Resource;
 
-    constructor(public cost: number){
+    constructor(public cost: number) {
         this.resource = Resource.Food;
     }
 }
 
-export class Gold implements IResourceCost{
+export class Gold implements IResourceCost {
     resource: Resource;
 
-    constructor(public cost: number){
+    constructor(public cost: number) {
         this.resource = Resource.Gold;
     }
 }
 
-export class Stone implements IResourceCost{
+export class Stone implements IResourceCost {
     resource: Resource;
 
-    constructor(public cost: number){
+    constructor(public cost: number) {
         this.resource = Resource.Stone;
     }
 }
 
-export interface ITech
-{
+export interface ITech {
     name: string;
     details: string;
     costs?: IResourceCost[];
@@ -111,7 +107,7 @@ export interface ITech
 }
 
 export class PlayerColour {
-    constructor(public colour: string, public id: number) {};
+    constructor(public colour: string, public id: number) { };
 }
 
 export enum PlayerColours {
@@ -139,8 +135,8 @@ export const PlayerColourConstants = {
 
 export const TeamColourOptions = {
     array: [
-        PlayerColourConstants.blue1, 
-        PlayerColourConstants.red2, 
+        PlayerColourConstants.blue1,
+        PlayerColourConstants.red2,
         PlayerColourConstants.green3,
         PlayerColourConstants.yellow4,
         PlayerColourConstants.cyan5,
@@ -150,16 +146,15 @@ export const TeamColourOptions = {
     ]
 }
 
-export class Player
-{
-    constructor(public civ: ICiv) {}
+export class Player {
+    constructor(public civ: ICiv) { }
 
     playerColour?: PlayerColour;
     team?: number;
 
-    getColour() : string {
-        
-        if(!this.playerColour){
+    getColour(): string {
+
+        if (!this.playerColour) {
             return "none";
         }
 
@@ -167,12 +162,10 @@ export class Player
     }
 }
 
-export class Opponent extends Player
-{
+export class Opponent extends Player {
 }
 
-export interface IBuildOrder
-{
+export interface IBuildOrder {
     readonly name: string;
     readonly steps: BuildOrderStep[];
     readonly finalTips?: string;
@@ -180,9 +173,9 @@ export interface IBuildOrder
     readonly recommendedCivs?: ICiv[];
 }
 
-export class BuildOrderStep
-{
+export class BuildOrderStep {
     villagerCount?: string;
+    villagerCountEnd?: string;
     idealTimeInSeconds?: number;
     details?: string;
     footnotes?: string[];
@@ -192,7 +185,7 @@ export class BuildOrderStep
 }
 
 export class GameSpeed {
-    constructor(public name: string, public speed: number) {};
+    constructor(public name: string, public speed: number) { };
 }
 
 export enum GameSpeeds {
@@ -204,7 +197,7 @@ export enum GameSpeeds {
     Demo = 5
 }
 
-export class GameSpeedOptions{
+export class GameSpeedOptions {
     public static array: GameSpeed[] = [
         new GameSpeed("Slow", GameSpeeds.Slow),
         new GameSpeed("Casual", GameSpeeds.Casual),
@@ -212,4 +205,22 @@ export class GameSpeedOptions{
         new GameSpeed("Fast", GameSpeeds.Fast),
         new GameSpeed("Demo", GameSpeeds.Demo),
     ];
+}
+
+export function toSeconds(time: string) : number {
+    if (!time) return null;
+
+    var parts = time.split(":");
+
+    if(parts.length != 2) return null;
+
+    var seconds = parseInt(parts[1]);
+    var minutes = parseInt(parts[0]);
+
+    return (minutes * 60) + seconds;
+}
+
+export function capitalize(s) {
+    if (typeof s !== 'string') return ''
+    return s.charAt(0).toUpperCase() + s.slice(1)
 }
