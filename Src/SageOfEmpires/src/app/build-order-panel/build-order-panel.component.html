@@ -45,6 +45,11 @@
               <p *ngIf="!buildOrderService.selectedBuildOrder.hideOnYourOwn">But from now on...</p>
               <p *ngIf="!buildOrderService.selectedBuildOrder.hideOnYourOwn"><strong>YOU'RE ON YOUR OWN!</strong></p>
             </div>
+            
+            <div class="external-provider" *ngIf="buildOrderService.selectedBuildOrder.externalProvider">
+              <h4>This build order was provided by {{buildOrderService.selectedBuildOrder.externalProvider}}</h4>
+              <p>You can view the original build order at <a href="{{buildOrderService.selectedBuildOrder.externalUrl}}" target="_blank">{{buildOrderService.selectedBuildOrder.externalUrl}}</a></p>
+            </div>
           </div>
         </div>
       </mat-tab>

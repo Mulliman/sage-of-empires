@@ -57,6 +57,9 @@ export class BuildOrderGuideBuilder {
   build(): IBuildOrder {
     var bo = new CommunityBuildOrder();
 
+    bo.externalUrl = `https://buildorderguide.com/#/build/${this.json.id}/0`;
+    bo.externalProvider = "buildorderguide.com"
+
     bo.name = `${this.json.title} (${this.json.author})`;
 
     let currentVilEndCount: number = 0;

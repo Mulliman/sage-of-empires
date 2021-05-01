@@ -171,6 +171,8 @@ export interface IBuildOrder {
     readonly finalTips?: string;
     readonly hideOnYourOwn?: boolean;
     readonly recommendedCivs?: ICiv[];
+    readonly externalUrl?: string;
+    readonly externalProvider?: string;
 }
 
 export class BuildOrderStep {

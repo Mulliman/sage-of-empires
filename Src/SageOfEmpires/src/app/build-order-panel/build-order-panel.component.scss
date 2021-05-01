@@ -26,6 +26,21 @@
             margin: 0;
         }
     }
+
+    .external-provider{
+        text-align: center;
+        background: #cee8e8;
+        padding: 20px;
+        border: 2px solid #386868;
+
+        h4{
+            font-weight: bold;
+        }
+
+        p:last-child{
+            margin: 0;
+        }
+    }
 }
 
 .build-order-steps{

@@ -5,4 +5,6 @@ export class CommunityBuildOrder implements IBuildOrder {
   finalTips = "";
   hideOnYourOwn = true;
   recommendedCivs = [];
+  externalUrl = null;
+  externalProvider = null;
 }
