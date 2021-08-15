@@ -335,3 +335,31 @@ export class Serjeant extends UnitBase{
   name: any = "Serjeant";
   costs = [ new Food(60), new Gold(35)];
 }
+
+export class HussiteWagon extends UnitBase{
+  strengths: string = "Strong vs archers and infantry.";
+  weaknesses: string = "Weak vs mangonels, bombard cannon, knights, throwing axemen, and huskarls.";
+  name: any = "Hussite Wagon";
+  costs = [ new Wood(110), new Gold(70)];
+}
+
+export class Houfnice extends UnitBase{
+  strengths: string = "Strong vs buildings, slow / densely packed units, archers, scorpions, onagers, and trebuchets.";
+  weaknesses: string = "Weak vs mangonels, bombard cannon, knights, throwing axemen, and huskarls.";
+  name: any = "Houfnice";
+  costs = [ new Wood(225), new Gold(225)];
+}
+
+export class Obuch extends UnitBase{
+  strengths: string = "Each attack reduces armour by -1. Strong vs high melee armour units, skirmishers, spearmen, rams, and buildings.";
+  weaknesses: string = "Weak vs gunpowder, archers, slingers, and ranged melee units.";
+  name: any = "Obuch";
+  costs = [ new Food(55), new Gold(20)];
+}
+
+export class WingedHussar extends UnitBase{
+  strengths: string = "Strong vs archers, siege, monks, and gunpowder.";
+  weaknesses: string = "Weak vs most melee units, genoese crossbowmen, and spearmen.";
+  name: any = "Winged Hussar";
+  costs = [ new Food(80)];
+}

@@ -1,5 +1,5 @@
 import { ICiv, IUnit, ITech, CivBase, Food, Gold, Wood, Stone } from '../model';
-import { Longbowman, JaguarWarrior, Cataphract, WoadRaider, ChuKoNu, ThrowingAxeman, Huskarl, Samurai, Mangudai, WarElephant, Mameluke, TeutonicKnight, Janissary, Longboat, Berserk, Tarkan, WarWagon, TurtleShip, PlumedArcher, Conquistador, Missionary, Kamayuk, Slinger, ElephantArcher, ImperialCamelRider, GenoeseCrossbowman, Condottiero, MagyarHuszar, Boyar, CamelArcher, Genitour, ShotelWarrior, Gbeto, OrganGun, Caravel, Arambai, BallistaElephant, KarambitWarrior, RattanArcher, ImperialSkirmisher, Konnik, Kipchak, Leitis, Keshik, FlamingCamel, Coustillier, FlemishMilitia, Serjeant } from './units';
+import { Longbowman, JaguarWarrior, Cataphract, WoadRaider, ChuKoNu, ThrowingAxeman, Huskarl, Samurai, Mangudai, WarElephant, Mameluke, TeutonicKnight, Janissary, Longboat, Berserk, Tarkan, WarWagon, TurtleShip, PlumedArcher, Conquistador, Missionary, Kamayuk, Slinger, ElephantArcher, ImperialCamelRider, GenoeseCrossbowman, Condottiero, MagyarHuszar, Boyar, CamelArcher, Genitour, ShotelWarrior, Gbeto, OrganGun, Caravel, Arambai, BallistaElephant, KarambitWarrior, RattanArcher, ImperialSkirmisher, Konnik, Kipchak, Leitis, Keshik, FlamingCamel, Coustillier, FlemishMilitia, Serjeant, HussiteWagon, Houfnice, Obuch, WingedHussar } from './units';
 
 export class Aztecs extends CivBase {
     armyType = "Infantry and Monk";
@@ -28,6 +28,22 @@ export class Berbers extends CivBase {
         "Ships move +10% faster."
     ];
     name: any = "Berbers";
+}
+
+export class Bohemians extends CivBase {
+    armyType = "Gunpowder and monks";
+    uniqueUnits = [ new HussiteWagon(), new Houfnice() ];
+    castleTech = { name: "Wagenburg Tactics", details: "Gunpowder units move 15% faster", costs: [ new Food(300), new Gold(300) ] };
+    imperialTech = { name: "Hussite Reforms", details: "Monks and Monastery upgrades have their gold cost replaced by food", costs: [ new Food(800), new Gold(450) ] };
+    teamBonus = "Markets work 80% faster.";
+    civBonuses = [
+        "Blacksmiths, Monasteries and Universities cost -100 wood.",
+        "Chemistry and Hand Cannoneer available in the Castle Age.",
+        "The Spearman line deals +25% bonus damage.",
+        "Fervor and Sanctity affect Villagers.",
+        "Mining Camp technologies free."
+    ];
+    name: any = "Bohemians";
 }
 
 export class Britons extends CivBase {
@@ -300,7 +316,7 @@ export class Koreans extends CivBase {
 
 export class Lithuanians extends CivBase {
     armyType = "Cavalry and monks";
-    uniqueUnits = [ new Leitis() ];
+    uniqueUnits = [ new Leitis(), new WingedHussar() ];
     castleTech = { name: "Hill Forts", details: "Town Centers +3 range.", costs: [ new Food(250), new Gold(250) ] };
     imperialTech = { name: "Tower Shields", details: "Spearman line and Skirmishers +2 pierce armor.", costs: [ new Food(500), new Gold(200) ] };
     teamBonus = "Monastery works 20% faster.";
@@ -395,6 +411,20 @@ export class Persians extends CivBase {
         "Town Centers and Docks have double HP and work 10%/15%/20% faster in the Feudal/Castle/Imperial Age."
     ];
     name: any = "Persians";
+}
+
+export class Poles extends CivBase {
+    armyType = "Cavalry";
+    uniqueUnits = [ new Obuch(), new WingedHussar() ];
+    castleTech = { name: "Szlachta Privileges", details: "Knight line costs -60% gold.", costs: [ new Food(500), new Gold(300) ] };
+    imperialTech = { name: "Lechitic Legacy", details: "Scout Cavalry line deals trample damage.", costs: [ new Food(750), new Gold(550) ] };
+    teamBonus = "Scout Cavalry, Light Cavalry, Hussar, and Winged Hussar +1 attack vs. archers.";
+    civBonuses = [
+        "Villagers recover 5 HPs per minute in the Dark Age, 10 in the Feudal Age, 15 in the Castle Age, and 20 in the Imperial Age",
+        "The Folwark replaces the Mill",
+        "Stone miners generate gold in addition to stone"
+    ];
+    name: any = "Poles";
 }
 
 export class Portuguese extends CivBase {
