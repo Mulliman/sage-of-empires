@@ -67,7 +67,7 @@ export class WarElephant extends UnitBase{
   strengths: string = "Strong vs melee and buildings.";
   weaknesses: string = "Weak vs pikeman, camels and, monks.";
   name: any = "War Elephant";
-  costs = [ new Food(200), new Gold(75)];
+  costs = [ new Food(170), new Gold(85)];
 }
 
 export class Mameluke extends UnitBase{

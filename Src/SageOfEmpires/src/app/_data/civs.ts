@@ -82,7 +82,7 @@ export class Burgundians extends CivBase {
     imperialTech = { name: "Flemish Revolution", details: "Upgrades all existing villagers to flemish militia, lets the player train flemish militia at the Town Center.", costs: [ new Food(800), new Gold(450) ] };
     teamBonus = "Relics generate both Gold and Food.";
     civBonuses = [
-        "Economic upgrades are available one Age earlier than other civilizations.",
+        "Economic upgrades cost -50% food and are available one Age earlier than other civilizations.",
         "Stable technologies are 50% cheaper",
         "Cavalier upgrade available in the Castle Age.",
         "Gunpowder units gain a +25% bonus to their attack"
@@ -93,7 +93,7 @@ export class Burgundians extends CivBase {
 export class Burmese extends CivBase {
     armyType = "Monks and elephants";
     uniqueUnits = [ new Arambai() ];
-    castleTech = { name: "Howdah", details: "Battle Elephants +1/+1 armor.", costs: [ new Food(400), new Wood(300) ] };
+    castleTech = { name: "Howdah", details: "Battle Elephants +1/+2 armor.", costs: [ new Food(400), new Wood(300) ] };
     imperialTech = { name: "Manipur Cavalry", details: "Cavalry and Arambai +6 attack against standard buildings.", costs: [ new Food(650), new Gold(400) ] };
     teamBonus = "Relics are visible on the map from the game start.";
     civBonuses = [
@@ -140,7 +140,7 @@ export class Chinese extends CivBase {
     uniqueUnits = [ new ChuKoNu() ];
     castleTech = { name: "Great Wall", details: "Walls and towers +30% HP.", costs: [ new Wood(400), new Stone(200) ] };
     imperialTech = { name: "Rocketry", details: "Chu Ko Nu +2, Scorpions +4 attack.", costs: [ new Wood(600), new Gold(600) ] };
-    teamBonus = "Farms start with +45 food.";
+    teamBonus = "Farms start with +10% food.";
     civBonuses = [
         "Start game with three extra Villagers, but with -200 food and -50 wood.",
         "Town Center supports ten population (instead of five) and have +5 LOS.",
@@ -153,12 +153,13 @@ export class Chinese extends CivBase {
 export class Cumans extends CivBase {
     armyType = "Cavalry";
     uniqueUnits = [ new Kipchak() ];
-    castleTech = { name: "Steppe Husbandry", details: "Scout Cavalry line, Steppe Lancers and Cavalry Archers are trained 50% faster.", costs: [ new Food(200), new Wood(300) ] };
+    castleTech = { name: "Steppe Husbandry", details: "Scout Cavalry line, Steppe Lancers and Cavalry Archers are trained 100% faster.", costs: [ new Food(200), new Wood(300) ] };
     imperialTech = { name: "Cuman Mercenaries", details: "Team members can create 10 free Elite Kipchaks at the Castle.", costs: [ new Food(650), new Gold(400) ] };
-    teamBonus = "Palisade Walls have +50% hit points.";
+    teamBonus = "Palisade Walls have +33% hit points.";
     civBonuses = [
         "Additional Town Center can be built in the Feudal Age.",
         "Siege Workshops and Battering Ram/Capped Ram available in the Feudal/Castle Age.",
+        "Archery Ranges and Stables cost -100 wood",
         "Cavalry move 5%/10%/15% faster in the Feudal/Castle/Imperial Age.",
     ];
     name: any = "Cumans";
@@ -182,8 +183,8 @@ export class Ethiopians extends CivBase {
 export class Franks extends CivBase {
     armyType = "Cavalry";
     uniqueUnits = [ new ThrowingAxeman() ];
-    castleTech = { name: "Chivalry", details: "Stables work 40% faster.", costs: [ new Wood(400), new Gold(400) ] };
-    imperialTech = { name: "Bearded Axe", details: "Throwing Axeman +1 range.", costs: [ new Food(400), new Gold(400) ] };
+    castleTech = { name: "Bearded Axe", details: "Throwing Axeman +1 range.", costs: [ new Food(300), new Gold(300) ] }; 
+    imperialTech = { name: "Chivalry", details: "Stables work 40% faster.", costs: [ new Wood(600), new Gold(500) ] };
     teamBonus = "Knights have +2 Line of Sight.";
     civBonuses = [
         "Farm upgrades are free.",
@@ -233,7 +234,7 @@ export class Incas extends CivBase {
     civBonuses = [
         "Start the game with an Eagle Scout.",
         "Start with a free Llama.",
-        "Villagers benefit from Blacksmith infantry upgrades.",
+        "Villagers benefit from Blacksmith infantry upgrades starting in Castle Age.",
         "Houses support 10 population.",
         "Buildings cost -15% stone."
     ];
@@ -249,7 +250,7 @@ export class Indians extends CivBase {
     civBonuses = [
         "Fishermen work 10% faster.",
         "Villagers are 10%/15%/20%/25% cheaper in the Dark/Feudal/Castle/Imperial Age.",
-        "Stable units have +1 pierce armor in the Castle Age and +1 pierce armor in the Imperial Age."
+        "Stable units have +1 pierce armor in the Castle Age and +2 pierce armor in the Imperial Age."
     ];
     name: any = "Indians";
 }
@@ -351,8 +352,8 @@ export class Malay extends CivBase {
     civBonuses = [
         "Advancing in Age is 66% faster.",
         "Fish Traps are 33% cheaper.",
-        "Fish Traps provide unlimited food.",
-        "Battle Elephants are 30% cheaper."
+        "Fish Traps provide 3 times more food.",
+        "Battle Elephants are 30%/40% cheaper in the Castle/Imperial Age."
     ];
     name: any = "Malay";
 }
@@ -366,7 +367,7 @@ export class Malians extends CivBase {
     civBonuses = [
         "Buildings cost -15% wood (except Farms).",
         "Barracks units have +1/+2/+3 pierce armor in the Feudal/Castle/Imperial Age.",
-        "Gold Mining is free."
+        "Gold mines last 30% longer."
     ];
     name: any = "Malians";
 }
@@ -447,7 +448,7 @@ export class Saracens extends CivBase {
     uniqueUnits = [ new Mameluke() ];
     castleTech = { name: "Madrasah", details: "33% of a Monk's gold cost are returned if the Monk gets killed.", costs: [ new Food(200), new Gold(100) ] };
     imperialTech = { name: "Zealotry", details: "Camel Riders and Mamelukes +20 hit points.", costs: [ new Food(500), new Gold(450) ] };
-    teamBonus = "Foot archers have +2 attack against standard buildings.";
+    teamBonus = "Foot archers have +3 attack against standard buildings.";
     civBonuses = [
         "The commodity trading fee is 5%.",
         "Markets cost -100 wood.",
@@ -461,10 +462,11 @@ export class Saracens extends CivBase {
 export class Sicilians extends CivBase {
     armyType = "Infantry";
     uniqueUnits = [ new Serjeant() ];
-    castleTech = { name: "First Crusade", details: "Each Town Center (up to a max of 5) spawns a one-time group of 7 Serjeants.", costs: [ new Food(300), new Gold(600) ] };
-    imperialTech = { name: "Scutage", details: "Each team member receives a one-time payment of 15 gold for each military unit that they own.", costs: [ new Food(500), new Gold(400) ] };
-    teamBonus = "Transport ships +5 carry capacity and +10 armor versus anti-ship bonus damage.";
+    castleTech = { name: "First Crusade", details: "Each Town Center (up to a max of 5) spawns a one-time group of 7 Serjeants. Also increases resistance against conversion.", costs: [ new Food(300), new Gold(600) ] };
+    imperialTech = { name: "Hauberk", details: "Knight-line +1/+2 armor.", costs: [ new Food(500), new Gold(400) ] };
+    teamBonus = "The first Transport Ship is free and created instantly.";
     civBonuses = [
+        "Start with +100 additional stone.",
         "Castles and Town Centers are constructed 100% faster.",
         "Land military units (with the exception of Siege weapons) absorb 50% of all incoming bonus damage.",
         "Farm upgrades provide +100% additional food to Farms before they need to be reseeded",
@@ -477,7 +479,7 @@ export class Slavs extends CivBase {
     armyType = "Infantry and siege";
     uniqueUnits = [ new Boyar() ];
     castleTech = { name: "Orthodoxy", details: "+3/+3 armor for Monks.", costs: [ new Food(200), new Gold(300) ] };
-    imperialTech = { name: "Druzhina", details: "infantry damage adjacent units.", costs: [ new Food(1200), new Gold(500) ] };
+    imperialTech = { name: "Druzhina", details: "Infantry damage adjacent units.", costs: [ new Food(1200), new Gold(500) ] };
     teamBonus = "Military buildings (excluding Castles and Docks) provide +5 population.";
     civBonuses = [
         "Farmers work 10% faster.",
@@ -494,7 +496,7 @@ export class Spanish extends CivBase {
     imperialTech = { name: "Supremacy", details: "+6 attack, +2 armor and pierce armor, and +40 hit points for Villagers.", costs: [ new Food(450), new Gold(250) ] };
     teamBonus = "Trade units generate +25% gold.";
     civBonuses = [
-        "Builders work 30% faster.",
+        "Builders work 30% faster (20% for Wonders).",
         "Blacksmith upgrades cost no gold.",
         "Cannon Galleons have better accuracy and faster cannonballs.",
         "Hand Cannoneers and Bombard Cannons fire 18% faster."
@@ -511,9 +513,10 @@ export class Tatars extends CivBase {
     civBonuses = [
         "Herdables contain +50% food.",
         "New Town Centers spawn two Sheep starting in the Castle Age.",
-        "Units deal +25% damage when attacking from hills (stacks with the regular hill attack bonus).",
+        "Units deal +50% (instead of +25%) damage when attacking from higher elevations.",
         "Thumb Ring is free.",
-        "Parthian Tactics is free."
+        "Parthian Tactics is free.",
+        "2 sheep spawn near newly-constructed Town Centers starting in the Castle Age."
     ];
     name: any = "Tatars";
 }
