@@ -8,6 +8,7 @@ import { CommunityBuildOrder } from '../_data/build-orders/community/CommunityBu
 import { BuildOrderGuide, Build } from '../_data/build-orders/community/buildorderguide.com/BuildOrderGuideFormat';
 import { isNumber } from 'util';
 import buildorderguideArcherRushHera from '../_data/build-orders/community/buildorderguide.com/buildorderguide-ArcherRushHera.json';
+import buildorderguideFastImp from '../_data/build-orders/community/buildorderguide.com/buildorderguide-FastImp.json';
 
 @Injectable({
   providedIn: 'root'
@@ -31,6 +32,7 @@ export class BuildOrderService {
 
   constructor() {
     this.communityBuildOrders.push(new BuildOrderGuideBuilder(buildorderguideArcherRushHera).build());
+    this.communityBuildOrders.push(new BuildOrderGuideBuilder(buildorderguideFastImp).build());
   }
 
   getRecommendedBuildOrders(civ: ICiv): IBuildOrder[] {
@@ -66,6 +68,7 @@ export class BuildOrderGuideBuilder {
     let currentVilStartCount: number = 0;
     let hasFeudaled = false;
     let hasCastled = false;
+    let hasImperialed = false;
 
     for (const communityStep of this.json.build) {
 
@@ -99,6 +102,10 @@ export class BuildOrderGuideBuilder {
 
         if(step.ageUpValue == "III"){
           hasCastled = true;
+        }
+
+        if(step.ageUpValue == "IV"){
+          hasImperialed = true;
         }
       } else {
         this.addFootnotesToStep(bo.steps[bo.steps.length - 1], communityStep);
