@@ -32,6 +32,20 @@
 <div class="margin build-order-card">
     <mat-card class="mat-elevation-z0">
         <mat-card-header>
+            <mat-card-title>Empire Wars build orders</mat-card-title>
+        </mat-card-header>
+
+        <div class="margin-top-tiny" *ngFor="let buildOrder of buildOrderService.ewBuildOrders" >
+            <button mat-raised-button 
+                class="full-width-button"
+                (click)="selectBuildOrder(buildOrder)">{{buildOrder.name}}</button>
+        </div>
+    </mat-card>
+</div>
+
+<div class="margin build-order-card">
+    <mat-card class="mat-elevation-z0">
+        <mat-card-header>
             <mat-card-title>BuildOrderGuide.com (beta)</mat-card-title>
         </mat-card-header>
 

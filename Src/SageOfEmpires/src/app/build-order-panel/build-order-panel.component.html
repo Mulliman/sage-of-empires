@@ -47,7 +47,7 @@
             </div>
             
             <div class="external-provider" *ngIf="buildOrderService.selectedBuildOrder.externalProvider">
-              <h4>This build order was provided by {{buildOrderService.selectedBuildOrder.externalProvider}}</h4>
+              <h4>Based on a build order by {{buildOrderService.selectedBuildOrder.externalProvider}}</h4>
               <p>You can view the original build order at <a href="{{buildOrderService.selectedBuildOrder.externalUrl}}" target="_blank">{{buildOrderService.selectedBuildOrder.externalUrl}}</a></p>
             </div>
           </div>

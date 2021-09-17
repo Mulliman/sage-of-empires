@@ -9,6 +9,9 @@ import { BuildOrderGuide, Build } from '../_data/build-orders/community/buildord
 import { isNumber } from 'util';
 import buildorderguideArcherRushHera from '../_data/build-orders/community/buildorderguide.com/buildorderguide-ArcherRushHera.json';
 import buildorderguideFastImp from '../_data/build-orders/community/buildorderguide.com/buildorderguide-FastImp.json';
+import { EWScoutRushBuildOrder } from '../_data/build-orders/ew/EWScoutRushBuildOrder';
+import { EWArcherRushBuildOrder } from '../_data/build-orders/ew/EWArcherRushBuildOrder';
+import { EWSkirmisherDefenseBuildOrder } from '../_data/build-orders/ew/EWSkirmisherDefenseBuildOrder';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +29,12 @@ export class BuildOrderService {
     new ArcherRushBuildOrder(),
     new ScoutRushBuildOrder(),
     new CobraCarDrushBuildOrder()
+  ];
+
+  public ewBuildOrders: IBuildOrder[] = [
+    new EWScoutRushBuildOrder(),
+    new EWArcherRushBuildOrder(),
+    new EWSkirmisherDefenseBuildOrder()
   ];
 
   public communityBuildOrders: IBuildOrder[] = [];
